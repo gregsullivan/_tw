@@ -21,6 +21,6 @@
 		"hot": "mix watch --hot",
 		"prod": "npm run production",
 		"production": "mix --production",
-		"bundle": "node scripts/bundle.js _tw"
+		"bundle": "npm run prod && node scripts/bundle.js _tw"
 	}
 }
