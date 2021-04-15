@@ -18,7 +18,6 @@
 		"development": "cross-env TAILWIND_MODE=build mix",
 		"watch": "mix watch",
 		"watch-poll": "mix watch -- --watch-options-poll=1000",
-		"hot": "mix watch --hot",
 		"prod": "npm run production",
 		"production": "mix --production",
 		"bundle": "npm run prod && node scripts/bundle.js _tw"
