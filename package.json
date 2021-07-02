@@ -7,24 +7,17 @@
 		"@tailwindcss/typography": "^0.4.1",
 		"@wordpress/eslint-plugin": "^9.0.6",
 		"@wordpress/stylelint-config": "^19.0.5",
-		"autoprefixer": "^10.2.6",
+		"archiver": "^5.3.0",
 		"cross-env": "^7.0.3",
-		"cssnano": "^5.0.6",
-		"gulp": "^4.0.2",
-		"gulp-postcss": "^9.0.0",
-		"gulp-rename": "^2.0.0",
-		"gulp-replace": "^1.1.3",
-		"gulp-zip": "^5.1.0",
 		"postcss-import": "^14.0.2",
 		"tailwindcss": "^2.2.4"
 	},
 	"scripts": {
 		"dev": "npm run development",
-		"development": "gulp",
-		"watch": "cross-env TAILWIND_MODE=watch gulp watch",
-		"watch-poll": "cross-env TAILWIND_MODE=watch gulp watch --polling",
+		"development": "npx tailwindcss --postcss -i ./tailwind/tailwind.css -c ./tailwind/tailwind.config.js -o ./theme/style.css",
+		"watch": "npx tailwindcss --postcss -i ./tailwind/tailwind.css -c ./tailwind/tailwind.config.js -o ./theme/style.css --watch",
 		"prod": "npm run production",
-		"production": "cross-env NODE_ENV=production gulp",
-		"bundle": "gulp bundle --basename _tw.zip"
+		"production": "cross-env NODE_ENV=production npx tailwindcss --postcss -i ./tailwind/tailwind.css -c ./tailwind/tailwind.config.js -o ./theme/style.css --minify",
+		"bundle": "npm run prod && node scripts/bundle.js _tw"
 	}
 }

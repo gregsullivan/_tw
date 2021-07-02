@@ -1,8 +1,8 @@
 module.exports = {
-	// mode: 'jit',
+	mode: 'jit',
 	future: {},
 	purge: [
-		'./**/*.php',
+		'./theme/**/*.php',
 	],
 	theme: {
 		extend: {},
