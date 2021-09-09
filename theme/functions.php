@@ -100,6 +100,13 @@ if ( ! function_exists( '_tw_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+
+		/**
+		 * Add responsive embeds and block editor styles.
+		 */
+		add_theme_support( 'responsive-embeds' );
+		add_theme_support( 'editor-styles' );
+		add_editor_style( 'style-editor.css' );
 	}
 endif;
 add_action( 'after_setup_theme', '_tw_setup' );
