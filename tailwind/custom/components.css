@@ -1,3 +1,18 @@
 /**
  * Custom component classes.
  */
+
+/* Content width */
+.entry-content > * {
+	@apply max-w-content mx-auto;
+}
+
+/* Wide width */
+.entry-content > .alignwide {
+	@apply max-w-wide;
+}
+
+/* Full width */
+.entry-content > .alignfull {
+	@apply max-w-none;
+}
