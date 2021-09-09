@@ -13,21 +13,21 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## 2021-09-09
-### Added
+### 2021-09-09
+#### Added
 - Support for Tailwind Typography in the block editor
 - Support for theme.json in Tailwind
 - Styles for the block editor's content, wide and full widths
 - A basic theme.json file
 - Classes for `entry-title` and `entry-content`
 
-### Changed
+#### Changed
 - There are now multiple .eslintrc files to handle the differences between node and browser linting
 
-## 2021-07-02
-### Changed
+### 2021-07-02
+#### Changed
 - Build process migrated from Laravel Mix to Tailwind's own CLI via `npm-run-all`
 
-## 2021-05-03
-### Added
+### 2021-05-03
+#### Added
 - Repository made public with initial functionality
