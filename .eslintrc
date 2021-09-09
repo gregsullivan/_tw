@@ -4,9 +4,5 @@
 	],
 	"env": {
 		"browser": true
-	},
-	"globals": {
-		"module": "readonly",
-		"require": "readonly"
 	}
 }
