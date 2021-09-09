@@ -1,0 +1,38 @@
+{
+	"version": 1,
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "body",
+					"color": "#000000",
+					"name": "Body"
+				},
+				{
+					"slug": "background",
+					"color": "#ffffff",
+					"name": "Background"
+				},
+				{
+					"slug": "primary",
+					"color": "#ff0000",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#00ff00",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#0000ff",
+					"name": "Tertiary"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "40rem",
+			"wideSize": "60rem"
+		}
+	}
+}
