@@ -14,10 +14,10 @@ get_header();
 
 		<section>
 			<header>
-				<h1><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', '_tw' ); ?></h1>
+				<h1 class="entry-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', '_tw' ); ?></h1>
 			</header>
 
-			<div>
+			<div class="entry-content">
 				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', '_tw' ); ?></p>
 
 					<?php

@@ -11,10 +11,10 @@
 
 <section>
 	<header>
-		<h1><?php esc_html_e( 'Nothing Found', '_tw' ); ?></h1>
+		<h1 class="entry-title"><?php esc_html_e( 'Nothing Found', '_tw' ); ?></h1>
 	</header>
 
-	<div>
+	<div class="entry-content">
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) :
 

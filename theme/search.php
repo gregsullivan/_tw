@@ -15,7 +15,7 @@ get_header();
 		<?php if ( have_posts() ) : ?>
 
 			<header>
-				<h1>
+				<h1 class="entry-title">
 					<?php
 					/* translators: %s: search query. */
 					printf( esc_html__( 'Search Results for: %s', '_tw' ), '<span>' . get_search_query() . '</span>' );
