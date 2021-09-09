@@ -1,23 +1,33 @@
 {
 	"private": true,
 	"devDependencies": {
+		"@_tw/themejson": "^0.1.2",
+		"@_tw/typography": "^0.4.1-1",
 		"@tailwindcss/aspect-ratio": "^0.2.1",
 		"@tailwindcss/forms": "^0.3.3",
 		"@tailwindcss/line-clamp": "^0.2.1",
-		"@tailwindcss/typography": "^0.4.1",
-		"@wordpress/eslint-plugin": "^9.0.6",
-		"@wordpress/stylelint-config": "^19.0.5",
+		"@wordpress/eslint-plugin": "^9.1.1",
+		"@wordpress/stylelint-config": "^19.1.0",
 		"archiver": "^5.3.0",
 		"cross-env": "^7.0.3",
+		"npm-run-all": "^4.1.5",
 		"postcss-import": "^14.0.2",
-		"tailwindcss": "^2.2.4"
+		"prettier": "^2.3.2",
+		"tailwindcss": "^2.2.14"
 	},
 	"scripts": {
+		"development:frontend": "npx tailwindcss --postcss -i ./tailwind/tailwind.css -c ./tailwind/tailwind-frontend.config.js -o ./theme/style.css",
+		"development:editor": "npx tailwindcss --postcss -i ./tailwind/tailwind.css -c ./tailwind/tailwind-editor.config.js -o ./theme/style-editor.css",
+		"development": "run-p development:*",
 		"dev": "npm run development",
-		"development": "npx tailwindcss --postcss -i ./tailwind/tailwind.css -c ./tailwind/tailwind.config.js -o ./theme/style.css",
-		"watch": "npx tailwindcss --postcss -i ./tailwind/tailwind.css -c ./tailwind/tailwind.config.js -o ./theme/style.css --watch",
+		"watch:frontend": "npm run development:frontend -- --watch",
+		"watch:editor": "npm run development:editor -- --watch",
+		"watch": "run-p watch:*",
+		"production:frontend": "cross-env NODE_ENV=production npm run development:frontend -- --minify",
+		"production:editor": "cross-env NODE_ENV=production npm run development:editor -- --minify",
+		"production": "run-p production:*",
 		"prod": "npm run production",
-		"production": "cross-env NODE_ENV=production npx tailwindcss --postcss -i ./tailwind/tailwind.css -c ./tailwind/tailwind.config.js -o ./theme/style.css --minify",
-		"bundle": "npm run prod && node scripts/bundle.js _tw"
+		"zip": "node scripts/zip.js _tw",
+		"bundle": "run-s production zip"
 	}
 }
