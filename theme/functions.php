@@ -141,7 +141,7 @@ add_action( 'widgets_init', '_tw_widgets_init' );
  */
 function _tw_scripts() {
 	wp_enqueue_style( '_tw-style', get_stylesheet_uri(), array(), _TW_VERSION );
-	wp_enqueue_script( '_tw-alpine', get_template_directory_uri() . '/js/alpine.js', array(), '2.8.2', true );
+	wp_enqueue_script( '_tw-alpine', get_template_directory_uri() . '/js/alpine.js', array(), '3.3.2', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
