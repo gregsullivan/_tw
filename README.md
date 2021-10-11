@@ -13,6 +13,10 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+### 2021-10-11
+#### Changed
+- Use `.prose` as our Typography selector
+
 ### 2021-09-09
 #### Added
 - Support for Tailwind Typography in the block editor

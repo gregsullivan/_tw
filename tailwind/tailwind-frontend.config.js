@@ -3,9 +3,6 @@ module.exports = {
 		require( './tailwind.config.js' ),
 	],
 	plugins: [
-		require( '@_tw/typography' )( {
-			postTitleSelector: '.entry-title',
-			postContentSelector: '.entry-content',
-		} ),
+		require( '@_tw/typography' )(),
 	],
 };

@@ -17,7 +17,7 @@ get_header();
 				<h1 class="entry-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', '_tw' ); ?></h1>
 			</header>
 
-			<div class="entry-content">
+			<div class="entry-content prose">
 				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', '_tw' ); ?></p>
 
 					<?php
