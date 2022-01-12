@@ -14,7 +14,7 @@
 		<h1 class="entry-title"><?php esc_html_e( 'Nothing Found', '_tw' ); ?></h1>
 	</header>
 
-	<div class="entry-content prose">
+	<div class="entry-content">
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) :
 
