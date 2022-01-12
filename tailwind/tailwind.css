@@ -5,7 +5,7 @@
  */
 
 /**
- * This injects custom font declarations.
+ * This injects custom `@font-face` rules.
  */
 @import "./custom/fonts.css";
 

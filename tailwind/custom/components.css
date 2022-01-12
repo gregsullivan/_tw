@@ -1,13 +1,47 @@
 /**
- * Custom component classes.
+ * Custom styles to immediately follow Tailwind’s `components` layer
+ *
+ * “Add more opinionated, complex classes like buttons, form controls, alerts,
+ * etc; the sort of pre-built components you often see in other frameworks that
+ * you might need to override with utility classes.”
+ *
+ * — from https://tailwindcss.com/docs/plugins#adding-components
  */
 
-/* Content width */
+/**
+ * Post title styles
+ *
+ * These will be applied to all headings with an `entry-title` class on the
+ * frontend and to the post heading in the block editor.
+ *
+ * The supplied styles are meant to match the default `h1` classes from
+ * Tailwind Typography.
+ */
+$post-title-selector {
+	@apply max-w-content mx-auto mb-6 text-3xl text-neutral-900 font-extrabold;
+}
+
+/**
+ * Post content styles (via Tailwind Typography)
+ *
+ * These will be applied to all content blocks with an `entry-content` class on
+ * the frontend and within the block editor.
+ *
+ * For details on how to customize Tailwind Typography via its modifier
+ * classes, please see:
+ *
+ * https://tailwindcss.com/docs/typography-plugin
+ */
+$post-content-selector {
+	@apply max-w-none prose prose-neutral prose-a:text-primary;
+}
+
+/* Content width from the `theme.json` file */
 .entry-content > * {
 	@apply max-w-content mx-auto;
 }
 
-/* Wide width */
+/* Wide width from the `theme.json` file */
 .entry-content > .alignwide {
 	@apply max-w-wide;
 }
