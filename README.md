@@ -1,5 +1,5 @@
-_tw
-===
+\_tw
+====
 
 This repository tracks the output of the [_tw WordPress starter theme generator](https://underscoretw.com/) with all options left blank.
 
@@ -13,6 +13,23 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+### 2022-01-11
+#### Added
+- Schema to `theme.json` file
+- `postcss-simple-vars` to change CSS selectors based on build target
+
+#### Changed
+- Update `tailwind.config.js` for Tailwind 3
+- Move Tailwind Typography modifier classes into `tailwind/custom/components.css`
+- Simplify Tailwind Typography configuration file
+- Switch from @_tw/typography to @tailwindcss/typography
+- Improve comments throughout
+
+#### Removed
+- Alpine.js
+- Stylelint
+- Separate configuration files for front-end and editor builds
+
 ### 2021-10-11
 #### Changed
 - Use `.prose` as our Typography selector
@@ -20,9 +37,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### 2021-09-09
 #### Added
 - Support for Tailwind Typography in the block editor
-- Support for theme.json in Tailwind
+- Support for `theme.json` in Tailwind
 - Styles for the block editor's content, wide and full widths
-- A basic theme.json file
+- A basic `theme.json` file
 - Classes for `entry-title` and `entry-content`
 
 #### Changed
