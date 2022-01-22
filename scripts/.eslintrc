@@ -5,7 +5,7 @@
 	"env": {
 		"node": true
 	},
-	rules: {
-		"no-console": "off",
-	},
+	"rules": {
+		"no-console": "off"
+	}
 }
