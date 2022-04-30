@@ -1,8 +1,44 @@
 {
-	"extends": [
-		"plugin:@wordpress/eslint-plugin/esnext"
+	"root": true,
+	"ignorePatterns": [
+		"*.min.js"
 	],
-	"env": {
-		"browser": true
-	}
+	"overrides": [
+		{
+			"files": [
+				"*.js"
+			],
+			"extends": [
+				"plugin:@wordpress/eslint-plugin/esnext"
+			],
+			"env": {
+				"browser": true
+			}
+		},
+		{
+			"files": [
+				"*.php"
+			],
+			"parser": "@angular-eslint/template-parser",
+			"plugins": [
+				"php-markup",
+				"tailwindcss"
+			],
+			"extends": [
+				"plugin:tailwindcss/recommended"
+			],
+			"rules": {
+				"tailwindcss/migration-from-tailwind-2": "off"
+			},
+			"settings": {
+				"tailwindcss": {
+					"config": "./tailwind/tailwind.config.js",
+					"cssFiles": [
+						"./theme/**/*.css"
+					],
+					"officialSorting": true
+				}
+			}
+		}
+	]
 }
