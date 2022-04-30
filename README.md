@@ -20,6 +20,23 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+### 2022-04-29
+#### Added
+- JavaScript build process using [esbuild](https://esbuild.github.io/)
+- Tailwind plugin for Prettier (for use in CSS files)
+- Tailwind plugin for eslint (for use in PHP files)
+- A `components` folder, automatically including CSS files within
+- Support for nested declarations by default
+- Tailwind Typography support for TinyMCE and the classic editor
+
+#### Changed
+- Restructure theme files with improvements from [Varia](https://github.com/Automattic/themes/tree/master/varia)
+- Base `phpcs.xml.dist` upon [WordPress Coding Standards](https://github.com/WordPress/WordPress-Coding-Standards) sample file
+- Improve Tailwind Typography block editor support
+
+#### Removed
+- Customizer and Custom Header support
+
 ### 2022-01-11
 #### Added
 - Schema to `theme.json` file
