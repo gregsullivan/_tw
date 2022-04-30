@@ -7,13 +7,6 @@ Right now there isn't a public repository for the generator itself. Please post 
 
 If you're starting a new project, [the generator](https://underscoretw.com/) is the best way to do that. You can also read [the documentation](https://underscoretw.com/docs/) for more details.
 
-## Roadmap
-
-- Complete template overhaul inspired by Varia
-- Include concise documentation in README.md
-- Add WooCommerce support
-- Create a WP-CLI package
-
 ## Changelog
 
 All notable changes to this project will be documented here.
@@ -76,3 +69,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### 2021-05-03
 #### Added
 - Repository made public with initial functionality
+
+## Roadmap
+
+- Complete template overhaul inspired by Varia
+- Include concise documentation in README.md
+- Add WooCommerce support
+- Create a WP-CLI package
