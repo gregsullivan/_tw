@@ -19,9 +19,15 @@
 /**
  * This injects Tailwind's component classes and any component classes
  * registered by plugins, then adds custom component classes.
+ *
+ * The `@import-glob` line imports all CSS files from the `components`
+ * directory (except for `components.css`, which is imported on the following
+ * line). This is meant to simplify the process of integrating styles from
+ * JavaScript components or WordPress plugins.
  */
 @import "tailwindcss/components";
-@import "./custom/components.css";
+@import-glob "./custom/components/**/!(components).css";
+@import "./custom/components/components.css";
 
 /**
  * This injects Tailwind's utility classes and any utility classes registered
