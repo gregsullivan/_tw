@@ -21,7 +21,7 @@
  * `postcss.config.js` file for details.
  */
 $post-title-selector {
-	@apply max-w-content mx-auto mb-6 text-3xl text-neutral-900 font-extrabold;
+	@apply mx-auto mb-6 max-w-content text-3xl font-extrabold text-neutral-900;
 }
 
 /**
@@ -39,12 +39,12 @@ $post-title-selector {
  * https://tailwindcss.com/docs/typography-plugin
  */
 $post-content-selector {
-	@apply max-w-none prose prose-neutral prose-a:text-primary;
+	@apply prose prose-neutral max-w-none prose-a:text-primary;
 }
 
 /* Content width from the `theme.json` file */
 .entry-content > * {
-	@apply max-w-content mx-auto;
+	@apply mx-auto max-w-content;
 }
 
 /* Wide width from the `theme.json` file */
