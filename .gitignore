@@ -2,6 +2,7 @@
 /vendor
 package-lock.json
 composer.lock
+script.min.js
 style.css
 style-editor.css
 .DS_Store
