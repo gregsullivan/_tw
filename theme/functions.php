@@ -158,6 +158,20 @@ function _tw_scripts() {
 add_action( 'wp_enqueue_scripts', '_tw_scripts' );
 
 /**
+ * Add the block editor class to TinyMCE.
+ *
+ * This allows TinyMCE to use Tailwind Typography styles with no other changes.
+ *
+ * @param array $settings TinyMCE settings.
+ * @return array
+ */
+function _tw_tinymce_add_class( $settings ) {
+	$settings['body_class'] = 'block-editor-block-list__layout';
+	return $settings;
+}
+add_filter( 'tiny_mce_before_init', '_tw_tinymce_add_class' );
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
