@@ -1,16 +1,22 @@
 {
-	"require": {
-		"php": ">=5.6"
-	},
 	"require-dev": {
 		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
-		"wptrt/wpthemereview": "^0.2.1",
-		"php-parallel-lint/php-parallel-lint": "^1.2.0",
-		"wp-cli/i18n-command": "^2.2.5"
+		"phpcompatibility/phpcompatibility-wp": "2.1.3",
+		"sirbrillig/phpcs-changed": "^2.5.1",
+		"sirbrillig/phpcs-variable-analysis": "^2.7.0",
+		"wp-cli/i18n-command": "^2.3.0",
+		"wp-coding-standards/wpcs": "^2.1.1"
 	},
 	"scripts": {
-		"lint:wpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
-		"lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor .",
+		"php:lint": "vendor/bin/phpcs -p -s",
+		"php:lint:errors": "vendor/bin/phpcs -p -s --runtime-set ignore_warnings_on_exit 1",
+		"php:lint:autofix": "vendor/bin/phpcbf",
+		"php:lint:changed": "vendor/bin/phpcs-changed --git --git-unstaged",
 		"make-pot": "wp i18n make-pot . theme/languages/_tw.pot"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
 	}
 }
