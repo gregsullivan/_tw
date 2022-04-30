@@ -4,14 +4,9 @@ module.exports = {
 		require( './tailwind-typography.config.js' ),
 	],
 	content: [
-		// Ensure changes to theme.json and all PHP files rebuild your CSS.
-		'./theme/theme.json',
+		// Ensure changes to PHP files and `theme.json` trigger a rebuild.
 		'./theme/**/*.php',
-	],
-	safelist: [
-		// Prevent editor-specific styles from being purged.
-		'editor-post-title__block',
-		'editor-post-title__input',
+		'./theme/theme.json',
 	],
 	theme: {
 		// Extend the default theme.
