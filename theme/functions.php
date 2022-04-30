@@ -107,6 +107,7 @@ if ( ! function_exists( '_tw_setup' ) ) :
 		add_theme_support( 'responsive-embeds' );
 		add_theme_support( 'editor-styles' );
 		add_editor_style( 'style-editor.css' );
+		remove_theme_support( 'block-templates' );
 	}
 endif;
 add_action( 'after_setup_theme', '_tw_setup' );
