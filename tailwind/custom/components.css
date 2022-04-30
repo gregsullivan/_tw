@@ -16,6 +16,9 @@
  *
  * The supplied styles are meant to match the default `h1` classes from
  * Tailwind Typography.
+ *
+ * The `$post-title-selector` variable is replaced by PostCSS. Please see the
+ * `postcss.config.js` file for details.
  */
 $post-title-selector {
 	@apply max-w-content mx-auto mb-6 text-3xl text-neutral-900 font-extrabold;
@@ -26,6 +29,9 @@ $post-title-selector {
  *
  * These will be applied to all content blocks with an `entry-content` class on
  * the frontend and within the block editor.
+ *
+ * The `$post-content-selector` variable is replaced by PostCSS. Please see the
+ * `postcss.config.js` file for details.
  *
  * For details on how to customize Tailwind Typography via its modifier
  * classes, please see:
