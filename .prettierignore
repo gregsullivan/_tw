@@ -1,0 +1,5 @@
+# Ignore all files:
+*.*
+
+# Negate the above pattern for CSS files in the `tailwind` folder:
+!tailwind/**/*.css

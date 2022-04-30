@@ -14,6 +14,7 @@
 		"postcss-import": "^14.1.0",
 		"postcss-simple-vars": "^6.0.3",
 		"prettier": "^2.6.2",
+		"prettier-plugin-tailwindcss": "^0.1.10",
 		"tailwindcss": "^3.0.24"
 	},
 	"scripts": {
@@ -25,6 +26,10 @@
 		"watch:editor": "npm run development:editor -- --watch",
 		"watch": "run-p watch:*",
 		"production:frontend": "cross-env NODE_ENV=production npm run development:frontend -- --minify",
+		"lint:prettier": "npx prettier --check tailwind/**/*.css",
+		"lint-fix:prettier": "npx prettier --write tailwind/**/*.css",
+		"lint": "run-p lint:*",
+		"lint-fix": "run-p lint-fix:*",
 		"production:editor": "cross-env NODE_ENV=production npm run development:editor -- --minify",
 		"production": "run-p production:*",
 		"prod": "npm run production",
