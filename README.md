@@ -75,4 +75,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Complete template overhaul inspired by Varia
 - Include concise documentation in README.md
 - Add WooCommerce support
+- Investigate development options not requiring symlinking
 - Create a WP-CLI package
