@@ -77,3 +77,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Add WooCommerce support
 - Investigate development options not requiring symlinking
 - Create a WP-CLI package
+- Record screencasts covering installation, development and deployment
