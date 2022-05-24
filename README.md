@@ -13,6 +13,13 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+### 2022-05-23
+#### Added
+- Include a `style.css` file containing only the WordPress file header
+
+#### Changed
+- Update documentation to focus on installation without symlinking
+
 ### 2022-04-29
 #### Added
 - JavaScript build process using [esbuild](https://esbuild.github.io/)
@@ -75,6 +82,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Complete template overhaul inspired by Varia
 - Include concise documentation in README.md
 - Add WooCommerce support
-- Investigate development options not requiring symlinking
 - Create a WP-CLI package
 - Record screencasts covering installation, development and deployment
