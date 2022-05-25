@@ -7,7 +7,7 @@ Right now there isn't a public repository for the generator itself. Please post 
 
 If you're starting a new project, [the generator](https://underscoretw.com/) is the best way to do that. You can also read [the documentation](https://underscoretw.com/docs/) for more details.
 
-> **Note**
+> **Note**\
 > The default contents of `README.md` are as follows:
 
 A custom theme based on \_tw
@@ -34,7 +34,7 @@ See the complete [development documentation](https://underscoretw.com/docs/tailw
 
 Or [deploy with the tool of your choice](https://underscoretw.com/docs/deployment/#h-other-deployment-options)!
 
-> **Note**
+> **Note**\
 > The default contents of `README.md` end here.
 
 ## Changelog
