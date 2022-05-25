@@ -43,12 +43,14 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-### 2022-05-23
+### 2022-05-24
 #### Added
 - Include a `style.css` file containing only the WordPress file header
+- Add quickstart instructions to `README.md`
 
 #### Changed
 - Update documentation to focus on installation without symlinking
+- Update file header
 
 ### 2022-04-29
 #### Added
@@ -110,7 +112,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## Roadmap
 
 - Complete template overhaul inspired by Varia
-- Include concise documentation in README.md
 - Add WooCommerce support
 - Create a WP-CLI package
 - Record screencasts covering installation, development and deployment
