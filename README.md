@@ -47,6 +47,13 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+### 2022-06-14
+#### Changed
+- Update to Tailwind 3.1
+
+#### Removed
+- The postcss-import module, as its functionality is included with Tailwind 3.1
+
 ### 2022-05-24
 #### Added
 - Include a `style.css` file containing only the WordPress file header
