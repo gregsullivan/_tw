@@ -1,9 +1,7 @@
 /node_modules
 /vendor
-package-lock.json
-composer.lock
+.DS_Store
 script.min.js
 style.css
 style-editor.css
-.DS_Store
-/_tw.zip
+_tw.zip
