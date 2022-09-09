@@ -30,18 +30,22 @@ if ( post_password_required() ) {
 			<?php
 			$_tw_comment_count = get_comments_number();
 			if ( '1' === $_tw_comment_count ) {
+				// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', '_tw' ),
-					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
+					esc_html__( 'One comment on &ldquo;%1$s&rdquo;', '_tw' ),
+					get_the_title()
 				);
+				// phpcs:enable WordPress.Security.EscapeOutput.OutputNotEscaped
 			} else {
+				// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
 				printf(
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $_tw_comment_count, 'comments title', '_tw' ) ),
-					number_format_i18n( $_tw_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
+					esc_html( _nx( '%1$s comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', $_tw_comment_count, 'comments title', '_tw' ) ),
+					number_format_i18n( $_tw_comment_count ),
+					get_the_title()
 				);
+				// phpcs:enable WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 			?>
 		</h2>

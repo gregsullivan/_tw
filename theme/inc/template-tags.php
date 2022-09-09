@@ -25,30 +25,99 @@ if ( ! function_exists( '_tw_posted_on' ) ) :
 			esc_html( get_the_modified_date() )
 		);
 
-		$posted_on = sprintf(
-			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', '_tw' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		printf(
+			'<a href="%1$s" rel="bookmark">%2$s</a>',
+			esc_url( get_permalink() ),
+			$time_string // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		);
-
-		echo '<span>' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-
 	}
 endif;
 
 if ( ! function_exists( '_tw_posted_by' ) ) :
 	/**
-	 * Prints HTML with meta information for the current author.
+	 * Prints HTML with meta information about theme author.
 	 */
 	function _tw_posted_by() {
-		$byline = sprintf(
-			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', '_tw' ),
-			'<span><a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+		printf(
+			/* translators: 1: posted by label, only visible to screen readers. 2: author link. 3: post author. */
+			'<span class="sr-only">%1$s</span><span class="author vcard"><a class="url fn n" href="%2$s">%3$s</a></span>',
+			esc_html__( 'Posted by', '_tw' ),
+			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+			esc_html( get_the_author() )
 		);
+	}
+endif;
 
-		echo '<span> ' . $byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+if ( ! function_exists( '_tw_comment_count' ) ) :
+	/**
+	 * Prints HTML with the comment count for the current post.
+	 */
+	function _tw_comment_count() {
+		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+			/* translators: %s: Name of current post. Only visible to screen readers. */
+			comments_popup_link( sprintf( __( 'Leave a comment<span class="sr-only"> on %s</span>', '_tw' ), get_the_title() ) );
+		}
+	}
+endif;
 
+if ( ! function_exists( '_tw_entry_meta' ) ) :
+	/**
+	 * Prints HTML with meta information for the categories, tags and comments.
+	 */
+	function _tw_entry_meta() {
+
+		// Hide author, post date, category and tag text for pages.
+		if ( 'post' === get_post_type() ) {
+
+			// Posted by.
+			_tw_posted_by();
+
+			// Posted on.
+			_tw_posted_on();
+
+			/* translators: used between list items, there is a space after the comma. */
+			$categories_list = get_the_category_list( __( ', ', '_tw' ) );
+			if ( $categories_list ) {
+				printf(
+					/* translators: 1: posted in label, only visible to screen readers. 2: list of categories. */
+					'<span class="sr-only">%1$s</span>%2$s',
+					esc_html__( 'Posted in', '_tw' ),
+					$categories_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				);
+			}
+
+			/* translators: used between list items, there is a space after the comma. */
+			$tags_list = get_the_tag_list( '', __( ', ', '_tw' ) );
+			if ( $tags_list ) {
+				printf(
+					/* translators: 1: tags label, only visible to screen readers. 2: list of tags. */
+					'<span class="sr-only">%1$s</span>%2$s',
+					esc_html__( 'Tags:', '_tw' ),
+					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				);
+			}
+		}
+
+		// Comment count.
+		if ( ! is_singular() ) {
+			_tw_comment_count();
+		}
+
+		// Edit post link.
+		edit_post_link(
+			sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers. */
+					__( 'Edit <span class="sr-only">%s</span>', '_tw' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			)
+		);
 	}
 endif;
 
@@ -57,57 +126,58 @@ if ( ! function_exists( '_tw_entry_footer' ) ) :
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
 	function _tw_entry_footer() {
-		// Hide category and tag text for pages.
+
+		// Hide author, post date, category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', '_tw' ) );
+
+			// Posted by.
+			_tw_posted_by();
+
+			// Posted on.
+			_tw_posted_on();
+
+			/* translators: used between list items, there is a space after the comma. */
+			$categories_list = get_the_category_list( __( ', ', '_tw' ) );
 			if ( $categories_list ) {
-				/* translators: 1: list of categories. */
-				printf( '<span>' . esc_html__( 'Posted in %1$s', '_tw' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf(
+					/* translators: 1: posted in label, only visible to screen readers. 2: list of categories. */
+					'<span class="sr-only">%1$s</span>%2$s',
+					esc_html__( 'Posted in', '_tw' ),
+					$categories_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				);
 			}
 
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', '_tw' ) );
+			/* translators: used between list items, there is a space after the comma. */
+			$tags_list = get_the_tag_list( '', __( ', ', '_tw' ) );
 			if ( $tags_list ) {
-				/* translators: 1: list of tags. */
-				printf( '<span>' . esc_html__( 'Tagged %1$s', '_tw' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf(
+					/* translators: 1: tags label, only visible to screen readers. 2: list of tags. */
+					'<span class="sr-only">%1$s</span>%2$s',
+					esc_html__( 'Tags:', '_tw' ),
+					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				);
 			}
 		}
 
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span>';
-			comments_popup_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: post title */
-						__( 'Leave a Comment<span> on %s</span>', '_tw' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					wp_kses_post( get_the_title() )
-				)
-			);
-			echo '</span>';
+		// Comment count.
+		if ( ! is_singular() ) {
+			_tw_comment_count();
 		}
 
+		// Edit post link.
 		edit_post_link(
 			sprintf(
 				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span>%s</span>', '_tw' ),
+					/* translators: %s: Name of current post. Only visible to screen readers. */
+					__( 'Edit <span class="sr-only">%s</span>', '_tw' ),
 					array(
 						'span' => array(
 							'class' => array(),
 						),
 					)
 				),
-				wp_kses_post( get_the_title() )
-			),
-			'<span>',
-			'</span>'
+				get_the_title()
+			)
 		);
 	}
 endif;
@@ -116,39 +186,84 @@ if ( ! function_exists( '_tw_post_thumbnail' ) ) :
 	/**
 	 * Displays an optional post thumbnail.
 	 *
-	 * Wraps the post thumbnail in an anchor element on index views, or a div
-	 * element when on single views.
+	 * Wraps the post thumbnail in an anchor element on index views
 	 */
 	function _tw_post_thumbnail() {
-		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+		if ( ! _tw_can_show_post_thumbnail() ) {
 			return;
 		}
 
 		if ( is_singular() ) :
 			?>
 
-			<div>
+			<figure>
 				<?php the_post_thumbnail(); ?>
-			</div>
+			</figure><!-- .post-thumbnail -->
 
-		<?php else : ?>
+			<?php
+		else :
+			?>
 
-			<a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-				<?php
-					the_post_thumbnail(
-						'post-thumbnail',
-						array(
-							'alt' => the_title_attribute(
-								array(
-									'echo' => false,
-								)
-							),
-						)
-					);
-				?>
-			</a>
+			<figure>
+				<a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+					<?php the_post_thumbnail( 'post-thumbnail' ); ?>
+				</a>
+			</figure>
 
 			<?php
 		endif; // End is_singular().
+	}
+endif;
+
+if ( ! function_exists( '_tw_comment_avatar' ) ) :
+	/**
+	 * Returns the HTML markup to generate a user avatar.
+	 *
+	 * @param mixed $id_or_email The Gravatar to retrieve. Accepts a user_id, gravatar md5 hash,
+	 *                           user email, WP_User object, WP_Post object, or WP_Comment object.
+	 */
+	function _tw_get_user_avatar_markup( $id_or_email = null ) {
+
+		if ( ! isset( $id_or_email ) ) {
+			$id_or_email = get_current_user_id();
+		}
+
+		return sprintf( '<div class="vcard">%s</div>', get_avatar( $id_or_email, _tw_get_avatar_size() ) );
+	}
+endif;
+
+if ( ! function_exists( '_tw_discussion_avatars_list' ) ) :
+	/**
+	 * Displays a list of avatars involved in a discussion for a given post.
+	 *
+	 * @param array $comment_authors Comment authors to list as avatars.
+	 */
+	function _tw_discussion_avatars_list( $comment_authors ) {
+		if ( empty( $comment_authors ) ) {
+			return;
+		}
+		echo '<ol>', "\n";
+		foreach ( $comment_authors as $id_or_email ) {
+			printf(
+				"<li>%s</li>\n",
+				_tw_get_user_avatar_markup( $id_or_email ) // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			);
+		}
+		echo '</ol>', "\n";
+	}
+endif;
+
+if ( ! function_exists( '_tw_the_posts_navigation' ) ) :
+	/**
+	 * Documentation for function.
+	 */
+	function _tw_the_posts_navigation() {
+		the_posts_pagination(
+			array(
+				'mid_size'  => 2,
+				'prev_text' => __( 'Newer posts', '_tw' ),
+				'next_text' => __( 'Older posts', '_tw' ),
+			)
+		);
 	}
 endif;

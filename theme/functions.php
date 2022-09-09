@@ -47,10 +47,11 @@ if ( ! function_exists( '_tw_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
+		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', '_tw' ),
+				'menu-1' => __( 'Primary', '_tw' ),
+				'menu-2' => __( 'Footer Menu', '_tw' ),
 			)
 		);
 
@@ -74,13 +75,16 @@ if ( ! function_exists( '_tw_setup' ) ) :
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
-
-		/**
-		 * Add responsive embeds and block editor styles.
-		 */
-		add_theme_support( 'responsive-embeds' );
+		// Add support for editor styles.
 		add_theme_support( 'editor-styles' );
+
+		// Enqueue editor styles.
 		add_editor_style( 'style-editor.css' );
+
+		// Add support for responsive embedded content.
+		add_theme_support( 'responsive-embeds' );
+
+		// Remove support for block templates.
 		remove_theme_support( 'block-templates' );
 	}
 endif;
@@ -94,12 +98,12 @@ add_action( 'after_setup_theme', '_tw_setup' );
 function _tw_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', '_tw' ),
+			'name'          => __( 'Footer', '_tw' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', '_tw' ),
-			'before_widget' => '<section id="%1$s">',
+			'description'   => __( 'Add widgets here to appear in your footer.', '_tw' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2>',
+			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
 		)
 	);
@@ -122,7 +126,7 @@ add_action( 'wp_enqueue_scripts', '_tw_scripts' );
 /**
  * Add the block editor class to TinyMCE.
  *
- * This allows TinyMCE to use Tailwind Typography styles with no other changes.
+ * This allows TinyMCE to use Tailwind Typography styles.
  *
  * @param array $settings TinyMCE settings.
  * @return array

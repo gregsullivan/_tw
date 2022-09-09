@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part for displaying post archives and search results
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -14,29 +14,16 @@
 	<header class="entry-header">
 		<?php
 		if ( is_sticky() && is_home() && ! is_paged() ) {
-			printf( '<span">%s</span>', esc_html_x( 'Featured', 'post', '_tw' ) );
+			printf( '%s', esc_html_x( 'Featured', 'post', '_tw' ) );
 		}
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
-		endif;
+		the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 		?>
 	</header><!-- .entry-header -->
 
 	<?php _tw_post_thumbnail(); ?>
 
 	<div class="entry-content _tw-prose">
-		<?php
-		the_content();
-
-		wp_link_pages(
-			array(
-				'before' => '<div>' . __( 'Pages:', '_tw' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
+		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">

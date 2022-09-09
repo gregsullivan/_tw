@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page.php
+ * Template part for displaying pages
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -10,7 +10,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header>
+
+	<header class="entry-header">
 		<?php
 		if ( ! is_front_page() ) {
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -18,43 +19,42 @@
 			the_title( '<h2 class="entry-title">', '</h2>' );
 		}
 		?>
-	</header>
+	</header><!-- .entry-header -->
 
 	<?php _tw_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="entry-content _tw-prose">
 		<?php
 		the_content();
 
 		wp_link_pages(
 			array(
-				'before' => '<div>' . esc_html__( 'Pages:', '_tw' ),
+				'before' => '<div>' . __( 'Pages:', '_tw' ),
 				'after'  => '</div>',
 			)
 		);
 		?>
-	</div>
+	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer>
+		<footer class="entry-footer">
 			<?php
 			edit_post_link(
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span>%s</span>', '_tw' ),
+						__( 'Edit <span class="sr-only">%s</span>', '_tw' ),
 						array(
 							'span' => array(
 								'class' => array(),
 							),
 						)
 					),
-					wp_kses_post( get_the_title() )
-				),
-				'<span>',
-				'</span>'
+					get_the_title()
+				)
 			);
 			?>
-		</footer>
+		</footer><!-- .entry-footer -->
 	<?php endif; ?>
+
 </article><!-- #post-<?php the_ID(); ?> -->

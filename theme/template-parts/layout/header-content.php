@@ -10,9 +10,9 @@
 ?>
 
 <header id="masthead">
+
 	<div>
 		<?php
-		the_custom_logo();
 		if ( is_front_page() ) :
 			?>
 			<h1><?php bloginfo( 'name' ); ?></h1>
@@ -22,6 +22,7 @@
 			<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php
 		endif;
+
 		$_tw_description = get_bloginfo( 'description', 'display' );
 		if ( $_tw_description || is_customize_preview() ) :
 			?>
@@ -29,15 +30,18 @@
 		<?php endif; ?>
 	</div>
 
-	<nav id="site-navigation">
+	<nav id="site-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', '_tw' ); ?>">
 		<button aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_tw' ); ?></button>
+
 		<?php
 		wp_nav_menu(
 			array(
 				'theme_location' => 'menu-1',
 				'menu_id'        => 'primary-menu',
+				'items_wrap'     => '<ul id="%1$s" class="%2$s" aria-label="submenu">%3$s</ul>',
 			)
 		);
 		?>
 	</nav><!-- #site-navigation -->
+
 </header><!-- #masthead -->

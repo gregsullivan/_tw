@@ -10,31 +10,40 @@
 get_header();
 ?>
 
-	<main id="primary">
+	<section id="primary">
+		<main id="main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+			<?php
+			/* Start the Loop */
+			while ( have_posts() ) :
+				the_post();
+				get_template_part( 'template-parts/content/content', 'single' );
 
-			get_template_part( 'template-parts/content/content', get_post_type() );
+				if ( is_singular( 'post' ) ) {
+					// Previous/next post navigation.
+					the_post_navigation(
+						array(
+							'next_text' => '<span aria-hidden="true">' . __( 'Next Post', '_tw' ) . '</span> ' .
+								'<span class="sr-only">' . __( 'Next post:', '_tw' ) . '</span> <br/>' .
+								'<span>%title</span>',
+							'prev_text' => '<span aria-hidden="true">' . __( 'Previous Post', '_tw' ) . '</span> ' .
+								'<span class="sr-only">' . __( 'Previous post:', '_tw' ) . '</span> <br/>' .
+								'<span>%title</span>',
+						)
+					);
+				}
 
-			the_post_navigation(
-				array(
-					'prev_text' => '<span>' . esc_html__( 'Previous:', '_tw' ) . '</span> <span>%title</span>',
-					'next_text' => '<span>' . esc_html__( 'Next:', '_tw' ) . '</span> <span>%title</span>',
-				)
-			);
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) {
+					comments_template();
+				}
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+				// End the loop.
+			endwhile;
+			?>
 
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
+		</main><!-- #main -->
+	</section><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
