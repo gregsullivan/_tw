@@ -28,7 +28,16 @@
 				"plugin:tailwindcss/recommended"
 			],
 			"rules": {
-				"tailwindcss/migration-from-tailwind-2": "off"
+				"tailwindcss/migration-from-tailwind-2": "off",
+				"tailwindcss/no-custom-classname": [
+					"warn",
+					{
+						"config": "./tailwind/tailwind.config.js",
+						"whitelist": [
+							"(page|entry)\\-([a-z]*)"
+						]
+					}
+				]
 			},
 			"settings": {
 				"tailwindcss": {
