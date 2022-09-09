@@ -11,8 +11,8 @@
 /**
  * Post title styles
  *
- * These will be applied to all headings with an `entry-title` class on the
- * frontend and to the post heading in the block editor.
+ * These will be applied to all headings with a `page-title` or `entry-title`
+ * class on the frontend and to the post title in the block editor.
  *
  * The supplied styles are meant to match the default `h1` classes from
  * Tailwind Typography.
@@ -27,10 +27,10 @@ $(post-title-selector) {
 /**
  * Post content styles (via Tailwind Typography)
  *
- * These will be applied to all content blocks with an `entry-content` class on
- * the frontend and within the block editor.
+ * These will be applied to all containers with the `_tw-prose` class on the
+ * frontend, and within the block editor.
  *
- * The `$post-content-selector` variable is replaced by PostCSS. Please see the
+ * The `$prose-selector` variable is replaced by PostCSS. Please see the
  * `postcss.config.js` file for details.
  *
  * For details on how to customize Tailwind Typography via its modifier
@@ -38,21 +38,39 @@ $(post-title-selector) {
  *
  * https://tailwindcss.com/docs/typography-plugin
  */
-$(post-content-selector) {
+$(prose-selector) {
 	@apply prose prose-neutral max-w-none prose-a:text-primary;
 }
 
-/* Content width from the `theme.json` file */
+/**
+ * Layout styles for centered content areas
+ *
+ * If you are controlling the width of your content area with styles applied
+ * to its container, you can delete the following styles whose selectors begin
+ * with `.page-content >` and `.entry-content >`. For more details, please see
+ * the following:
+ *
+ * https://make.wordpress.org/core/2021/06/29/on-layout-and-content-width-in-wordpress-5-8/
+ */
+.page-content > *,
 .entry-content > * {
+	/* Content width from the `theme.json` file */
 	@apply mx-auto max-w-content;
 }
 
-/* Wide width from the `theme.json` file */
 .entry-content > .alignwide {
+	/* Wide width from the `theme.json` file */
 	@apply max-w-wide;
 }
 
-/* Full width */
 .entry-content > .alignfull {
 	@apply max-w-none;
+}
+
+.entry-content > .alignleft {
+	@apply float-left mr-8;
+}
+
+.entry-content > .alignright {
+	@apply float-right ml-8;
 }
