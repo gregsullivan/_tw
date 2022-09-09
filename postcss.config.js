@@ -2,10 +2,10 @@
 
 const selectors = ( 'editor' === process.env._TW_TARGET ) ? {
 	'post-title-selector': '.editor-post-title__input',
-	'post-content-selector': '.block-editor-block-list__layout',
+	'prose-selector': '.block-editor-block-list__layout',
 } : {
-	'post-title-selector': '.entry-title',
-	'post-content-selector': '.entry-content',
+	'post-title-selector': '.page-title, .entry-title',
+	'prose-selector': '._tw-prose',
 };
 
 module.exports = {
