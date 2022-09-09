@@ -47,6 +47,19 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+### 2022-09-08
+#### Changed
+- Finish restructuring theme files with improvements from [Varia](https://github.com/Automattic/themes/tree/master/varia)
+- Update Tailwind Typography selector
+- Clean up `package.json` scripts
+
+#### Added
+- `composer.lock` and `package-lock.json` files
+
+#### Removed
+- Default theme support for core custom background and custom logo functionality
+- Default setting for `content_width`
+
 ### 2022-06-14
 #### Changed
 - Update to Tailwind 3.1
