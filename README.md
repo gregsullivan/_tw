@@ -47,7 +47,7 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-### 2022-09-08
+### [2022-09-08](https://underscoretw.com/release-notes/september-2022/)
 #### Changed
 - Finish restructuring theme files with improvements from [Varia](https://github.com/Automattic/themes/tree/master/varia)
 - Update Tailwind Typography selector
@@ -60,14 +60,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Default theme support for core custom background and custom logo functionality
 - Default setting for `content_width`
 
-### 2022-06-14
+### [2022-06-14](https://underscoretw.com/release-notes/june-2022/)
 #### Changed
 - Update to Tailwind 3.1
 
 #### Removed
 - The postcss-import module, as its functionality is included with Tailwind 3.1
 
-### 2022-05-24
+### [2022-05-24](https://underscoretw.com/release-notes/may-2022/)
 #### Added
 - Include a `style.css` file containing only the WordPress file header
 - Add quickstart instructions to `README.md`
