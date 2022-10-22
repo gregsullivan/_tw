@@ -37,9 +37,11 @@ module.exports = {
 		require( '@tailwindcss/typography' )( {
 			className: typographyClassName,
 		} ),
+
 		// Uncomment below to add additional first-party Tailwind plugins.
-		// require( '@tailwindcss/aspect-ratio' ),
 		// require( '@tailwindcss/forms' ),
+		// require( '@tailwindcss/aspect-ratio' ),
 		// require( '@tailwindcss/line-clamp' ),
+		// require( '@tailwindcss/container-queries' ),
 	],
 };
