@@ -1,5 +1,13 @@
-// Set flag to include Preflight conditionally based on the build target.
-const includePreflight = ( 'editor' === process.env._TW_TARGET ) ? false : true;
+// Set Tailwind Typography class name and Preflight flag conditionally based
+// on the build target.
+let includePreflight, typographyClassName;
+if ( 'editor' === process.env._TW_TARGET ) {
+	includePreflight = false;
+	typographyClassName = 'block-editor-block-list__layout';
+} else {
+	includePreflight = true;
+	typographyClassName = 'prose';
+}
 
 module.exports = {
 	presets: [
@@ -22,12 +30,13 @@ module.exports = {
 		preflight: includePreflight,
 	},
 	plugins: [
-		// Add Tailwind Typography.
-		require( '@tailwindcss/typography' ),
-
 		// Extract colors and widths from `theme.json`.
 		require( '@_tw/themejson' )( require( '../theme/theme.json' ) ),
 
+		// Add Tailwind Typography.
+		require( '@tailwindcss/typography' )( {
+			className: typographyClassName,
+		} ),
 		// Uncomment below to add additional first-party Tailwind plugins.
 		// require( '@tailwindcss/aspect-ratio' ),
 		// require( '@tailwindcss/forms' ),

@@ -32,7 +32,7 @@
 		<?php endif; ?>
 	</header><!-- .page-header -->
 
-	<div class="page-content _tw-prose">
+	<div class="page-content prose">
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) :
 			?>

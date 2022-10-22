@@ -25,24 +25,6 @@ $(post-title-selector) {
 }
 
 /**
- * Post content styles (via Tailwind Typography)
- *
- * These will be applied to all containers with the `_tw-prose` class on the
- * frontend, and within the block editor.
- *
- * The `$prose-selector` variable is replaced by PostCSS. Please see the
- * `postcss.config.js` file for details.
- *
- * For details on how to customize Tailwind Typography via its modifier
- * classes, please see:
- *
- * https://tailwindcss.com/docs/typography-plugin
- */
-$(prose-selector) {
-	@apply prose prose-neutral max-w-none prose-a:text-primary;
-}
-
-/**
  * Layout styles for centered content areas
  *
  * If you are controlling the width of your content area with styles applied
