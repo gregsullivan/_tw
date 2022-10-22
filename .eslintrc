@@ -34,7 +34,8 @@
 					{
 						"config": "./tailwind/tailwind.config.js",
 						"whitelist": [
-							"(page|entry)\\-([a-z]*)"
+							"(page|entry|comment)\\-([-a-z]*)",
+							"vcard"
 						]
 					}
 				]

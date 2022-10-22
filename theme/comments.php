@@ -57,6 +57,7 @@ if ( post_password_required() ) {
 			wp_list_comments(
 				array(
 					'style'      => 'ol',
+					'callback'   => '_tw_html5_comment',
 					'short_ping' => true,
 				)
 			);
