@@ -47,6 +47,15 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+### [2022-10-22](https://underscoretw.com/release-notes/october-2022/)
+#### Changed
+- Update to Tailwind 3.2
+- Revisit approach to Tailwind Typography
+
+#### Added
+- Tailwind Typography support for comments
+- @tailwindcss/container-queries
+
 ### [2022-09-08](https://underscoretw.com/release-notes/september-2022/)
 #### Changed
 - Finish restructuring theme files with improvements from [Varia](https://github.com/Automattic/themes/tree/master/varia)
