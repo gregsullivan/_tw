@@ -47,6 +47,14 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+### [2023-01-09]
+#### Changed
+- Use Prettier to format JavaScript files in `./javascript`
+- Install ESLint directly and use the `eslint:recommended` configuration
+
+#### Removed
+- `@wordpress/eslint-plugin`
+
 ### [2022-10-22](https://underscoretw.com/release-notes/october-2022/)
 #### Changed
 - Update to Tailwind 3.2
