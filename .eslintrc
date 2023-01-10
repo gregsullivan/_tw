@@ -9,7 +9,7 @@
 				"*.js"
 			],
 			"extends": [
-				"plugin:@wordpress/eslint-plugin/esnext"
+				"eslint:recommended"
 			],
 			"env": {
 				"browser": true
