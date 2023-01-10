@@ -1,5 +1,5 @@
-// Set Tailwind Typography class name and Preflight flag conditionally based
-// on the build target.
+// Set Preflight flag and Tailwind Typography class name based on the build
+// target.
 let includePreflight, typographyClassName;
 if ( 'editor' === process.env._TW_TARGET ) {
 	includePreflight = false;
