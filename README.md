@@ -144,7 +144,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## Roadmap
 
-- Rewrite documentation
 - Record screencasts covering installation, development and deployment
 - Add WooCommerce support
 - Create a WP-CLI package

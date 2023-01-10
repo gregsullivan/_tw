@@ -45,8 +45,7 @@
 					"config": "./tailwind/tailwind.config.js",
 					"cssFiles": [
 						"./theme/**/*.css"
-					],
-					"officialSorting": true
+					]
 				}
 			}
 		}
