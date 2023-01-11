@@ -2,6 +2,9 @@
 *.*
 
 # Negate the above pattern for CSS files in the `tailwind` folder and for
-# JavaScript files in the `javascript` folder:
+# all JavaScript files:
 !tailwind/**/*.css
-!javascript/**/*.js
+!*.js
+
+# Ignore minified JavaScript:
+*.min.js

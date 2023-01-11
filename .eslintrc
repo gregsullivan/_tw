@@ -9,7 +9,8 @@
 				"*.js"
 			],
 			"extends": [
-				"eslint:recommended"
+				"eslint:recommended",
+				"prettier"
 			],
 			"env": {
 				"browser": true
