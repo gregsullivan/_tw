@@ -47,10 +47,14 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-### 2023-01-09
+### 2023-01-11
+#### Added
+- `@wordpress/prettier-config` and `eslint-config-prettier`
+
 #### Changed
-- Use Prettier to format JavaScript files in `./javascript`
+- Use Prettier to format JavaScript files
 - Install ESLint directly and use the `eslint:recommended` configuration
+- Set `ecmaVersion` to `latest` throughout
 
 #### Removed
 - `@wordpress/eslint-plugin`
@@ -62,7 +66,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 #### Added
 - Tailwind Typography support for comments
-- @tailwindcss/container-queries
+- `@tailwindcss/container-queries`
 
 ### [2022-09-08](https://underscoretw.com/release-notes/september-2022/)
 #### Changed
