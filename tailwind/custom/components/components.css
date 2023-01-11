@@ -21,7 +21,7 @@
  * `postcss.config.js` file for details.
  */
 $(post-title-selector) {
-	@apply mx-auto mb-6 max-w-content text-3xl font-extrabold text-neutral-900;
+	@apply max-w-content mx-auto mb-6 text-3xl font-extrabold text-neutral-900;
 }
 
 /**
@@ -37,7 +37,7 @@ $(post-title-selector) {
 .page-content > *,
 .entry-content > * {
 	/* Content width from the `theme.json` file */
-	@apply mx-auto max-w-content;
+	@apply max-w-content mx-auto;
 }
 
 .entry-content > .alignwide {
