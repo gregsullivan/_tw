@@ -8,7 +8,13 @@
  */
 
 if ( ! defined( '_TW_VERSION' ) ) {
-	// Replace the version number of the theme on each release.
+	/*
+	 * Set the theme’s version number.
+	 *
+	 * This is used primarily for cache busting. If you use `npm run bundle`
+	 * to create your production build, the value below will be replaced in the
+	 * generated zip file with a timestamp, converted to base 36.
+	 */
 	define( '_TW_VERSION', '0.1.0' );
 }
 
