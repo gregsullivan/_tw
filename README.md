@@ -14,27 +14,45 @@ If you're starting a new project, [the generator](https://underscoretw.com/) is 
 
 A custom theme based on \_tw
 
-## Installation
+## Quickstart
+
+### Installation
 
 1. Move this folder to `wp-content/themes` in your local development environment
 2. Run `npm install && npm run dev` in this folder
 3. Activate this theme in WordPress
 
-Looking for live reloading? Learn how to [add Browsersync to your project](https://underscoretw.com/docs/getting-started/#h-using-browsersync).
-
-## Development
+### Development
 
 4. Run `npm run watch`
 5. Add [Tailwind utility classes](https://tailwindcss.com/docs/utility-first) with abandon
 
-See the complete [development documentation](https://underscoretw.com/docs/tailwind-plugins-npm-commands/) for more details.
-
-## Deployment
+### Deployment
 
 6. Run `npm run bundle`
 7. Upload the resulting zip file to your site using the “Upload Theme” button on the “Add Themes” administration page
 
 Or [deploy with the tool of your choice](https://underscoretw.com/docs/deployment/#h-other-deployment-options)!
+
+## Full Documentation
+
+### Fundamentals
+
+* [Installation](https://underscoretw.com/docs/installation/)
+ Generate your custom theme, install it in WordPress and run your first Tailwind builds
+* [Development](https://underscoretw.com/docs/development/)
+ Watch for changes, build for production and learn more about how _tw, WordPress and Tailwind work together
+* [Deployment](https://underscoretw.com/docs/deployment/)
+ Share your new WordPress theme with the world
+* [Troubleshooting](https://underscoretw.com/docs/troubleshooting/)
+ Find solutions to potential issues and answers to frequently asked questions
+
+### Extras
+
+* [On Tailwind and WordPress](https://underscoretw.com/docs/wordpress-tailwind/)
+ Understand how WordPress and Tailwind work together
+* [Managing Styles for Custom Blocks](https://underscoretw.com/docs/custom-blocks/)
+ Learn strategies for using Tailwind in theme-specific custom blocks
 
 > **Note**\
 > The default contents of `README.md` end here.
