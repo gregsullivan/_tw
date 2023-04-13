@@ -267,3 +267,40 @@ if ( ! function_exists( '_tw_the_posts_navigation' ) ) :
 		);
 	}
 endif;
+
+if ( ! function_exists( '_tw_content_class' ) ) :
+	/**
+	 * Displays the class names for the post content wrapper.
+	 *
+	 * This allows us to add Tailwind Typography’s modifier classes throughout
+	 * the theme without repeating them in multiple files. (They can be edited
+	 * at the top of the `../functions.php` file via the
+	 * _TW_TYPOGRAPHY_CLASSES constant.)
+	 *
+	 * Based on WordPress core’s `body_class` and `get_body_class` functions.
+	 *
+	 * @param array $class Space-separated string or array of class names to
+	 *                     add to the class list.
+	 */
+	function _tw_content_class( $class = '' ) {
+		$all_classes = array( $class, _TW_TYPOGRAPHY_CLASSES );
+
+		foreach ( $all_classes as &$classes ) {
+			if ( ! empty( $classes ) ) {
+				if ( ! is_array( $classes ) ) {
+					$classes = preg_split( '#\s+#', $classes );
+				}
+			} else {
+				// Ensure that we always coerce class to being an array.
+				$classes = array();
+			}
+		}
+
+		$combined_classes = array_merge( $all_classes[0], $all_classes[1] );
+		$combined_classes = array_map( 'esc_attr', $combined_classes );
+
+		// Separates class names with a single space, preparing them for the
+		// post content wrapper.
+		echo 'class="' . esc_attr( implode( ' ', $combined_classes ) ) . '"';
+	}
+endif;

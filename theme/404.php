@@ -18,7 +18,7 @@ get_header();
 					<h1 class="page-title"><?php esc_html_e( 'Page Not Found', '_tw' ); ?></h1>
 				</header><!-- .page-header -->
 
-				<div class="page-content prose">
+				<div <?php _tw_content_class( 'page-content' ); ?>>
 					<p><?php esc_html_e( 'This page could not be found. It might have been removed or renamed, or it may never have existed.', '_tw' ); ?></p>
 					<?php get_search_form(); ?>
 				</div><!-- .page-content -->

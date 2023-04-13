@@ -177,7 +177,7 @@ function _tw_html5_comment( $comment, $args, $depth ) {
 				<?php endif; ?>
 			</footer><!-- .comment-meta -->
 
-			<div class="comment-content prose">
+			<div <?php _tw_content_class( 'comment-content' ); ?>>
 				<?php comment_text(); ?>
 			</div><!-- .comment-content -->
 

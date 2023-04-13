@@ -12,6 +12,30 @@ if ( ! defined( '_TW_VERSION' ) ) {
 	define( '_TW_VERSION', '0.1.0' );
 }
 
+if ( ! defined( '_TW_TYPOGRAPHY_CLASSES' ) ) {
+	/*
+	 * Set Tailwind Typography classes for the front end, block editor and
+	 * classic editor using the constant below.
+	 *
+	 * For the front end, these classes are added by the `_tw_content_class`
+	 * function. You will see that function used everywhere an `entry-content`
+	 * or `page-content` class has been added to a wrapper element.
+	 *
+	 * For the block editor, these classes are converted to a JavaScript array
+	 * and then used by the `./javascript/block-editor.js` file, which adds
+	 * them to the appropriate elements in the block editor (and adds them
+	 * again when they’re removed.)
+	 *
+	 * For the classic editor (and anything using TinyMCE, like Advanced Custom
+	 * Fields), these classes are added to TinyMCE’s body class when it
+	 * initializes.
+	 */
+	define(
+		'_TW_TYPOGRAPHY_CLASSES',
+		'prose prose-neutral max-w-none prose-a:text-primary'
+	);
+}
+
 if ( ! function_exists( '_tw_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -124,15 +148,44 @@ function _tw_scripts() {
 add_action( 'wp_enqueue_scripts', '_tw_scripts' );
 
 /**
- * Add the block editor class to TinyMCE.
- *
- * This allows TinyMCE to use Tailwind Typography styles.
+ * Enqueue the block editor script.
+ */
+function _tw_enqueue_block_editor_script() {
+	wp_enqueue_script(
+		'_tw-editor',
+		get_template_directory_uri() . '/js/block-editor.min.js',
+		array(
+			'wp-blocks',
+			'wp-edit-post',
+		),
+		_TW_VERSION,
+		true
+	);
+}
+add_action( 'enqueue_block_editor_assets', '_tw_enqueue_block_editor_script' );
+
+/**
+ * Create a JavaScript array containing the Tailwind Typography classes from
+ * _TW_TYPOGRAPHY_CLASSES for use when adding Tailwind Typography support
+ * to the block editor.
+ */
+function _tw_admin_scripts() {
+	?>
+	<script>
+		tailwindTypographyClasses = '<?php echo esc_attr( _TW_TYPOGRAPHY_CLASSES ); ?>'.split(' ');
+	</script>
+	<?php
+}
+add_action( 'admin_print_scripts', '_tw_admin_scripts' );
+
+/**
+ * Add the Tailwind Typography classes to TinyMCE.
  *
  * @param array $settings TinyMCE settings.
  * @return array
  */
 function _tw_tinymce_add_class( $settings ) {
-	$settings['body_class'] = 'block-editor-block-list__layout';
+	$settings['body_class'] = _TW_TYPOGRAPHY_CLASSES;
 	return $settings;
 }
 add_filter( 'tiny_mce_before_init', '_tw_tinymce_add_class' );

@@ -26,7 +26,7 @@
 
 	<?php _tw_post_thumbnail(); ?>
 
-	<div class="entry-content prose">
+	<div <?php _tw_content_class( 'entry-content' ); ?>>
 		<?php
 		the_content();
 
