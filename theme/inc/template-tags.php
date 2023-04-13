@@ -2,7 +2,7 @@
 /**
  * Custom template tags for this theme
  *
- * Eventually, some of the functionality here could be replaced by core features.
+ * Eventually, some functionality here could be replaced by core features.
  *
  * @package _tw
  */
@@ -39,7 +39,7 @@ if ( ! function_exists( '_tw_posted_by' ) ) :
 	 */
 	function _tw_posted_by() {
 		printf(
-			/* translators: 1: posted by label, only visible to screen readers. 2: author link. 3: post author. */
+		/* translators: 1: posted by label, only visible to screen readers. 2: author link. 3: post author. */
 			'<span class="sr-only">%1$s</span><span class="author vcard"><a class="url fn n" href="%2$s">%3$s</a></span>',
 			esc_html__( 'Posted by', '_tw' ),
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
@@ -63,6 +63,7 @@ endif;
 if ( ! function_exists( '_tw_entry_meta' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
+	 * This template tag is used in the entry header.
 	 */
 	function _tw_entry_meta() {
 
@@ -79,7 +80,7 @@ if ( ! function_exists( '_tw_entry_meta' ) ) :
 			$categories_list = get_the_category_list( __( ', ', '_tw' ) );
 			if ( $categories_list ) {
 				printf(
-					/* translators: 1: posted in label, only visible to screen readers. 2: list of categories. */
+				/* translators: 1: posted in label, only visible to screen readers. 2: list of categories. */
 					'<span class="sr-only">%1$s</span>%2$s',
 					esc_html__( 'Posted in', '_tw' ),
 					$categories_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -90,7 +91,7 @@ if ( ! function_exists( '_tw_entry_meta' ) ) :
 			$tags_list = get_the_tag_list( '', __( ', ', '_tw' ) );
 			if ( $tags_list ) {
 				printf(
-					/* translators: 1: tags label, only visible to screen readers. 2: list of tags. */
+				/* translators: 1: tags label, only visible to screen readers. 2: list of tags. */
 					'<span class="sr-only">%1$s</span>%2$s',
 					esc_html__( 'Tags:', '_tw' ),
 					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -107,7 +108,7 @@ if ( ! function_exists( '_tw_entry_meta' ) ) :
 		edit_post_link(
 			sprintf(
 				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers. */
+				/* translators: %s: Name of current post. Only visible to screen readers. */
 					__( 'Edit <span class="sr-only">%s</span>', '_tw' ),
 					array(
 						'span' => array(
@@ -140,7 +141,7 @@ if ( ! function_exists( '_tw_entry_footer' ) ) :
 			$categories_list = get_the_category_list( __( ', ', '_tw' ) );
 			if ( $categories_list ) {
 				printf(
-					/* translators: 1: posted in label, only visible to screen readers. 2: list of categories. */
+				/* translators: 1: posted in label, only visible to screen readers. 2: list of categories. */
 					'<span class="sr-only">%1$s</span>%2$s',
 					esc_html__( 'Posted in', '_tw' ),
 					$categories_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -151,7 +152,7 @@ if ( ! function_exists( '_tw_entry_footer' ) ) :
 			$tags_list = get_the_tag_list( '', __( ', ', '_tw' ) );
 			if ( $tags_list ) {
 				printf(
-					/* translators: 1: tags label, only visible to screen readers. 2: list of tags. */
+				/* translators: 1: tags label, only visible to screen readers. 2: list of tags. */
 					'<span class="sr-only">%1$s</span>%2$s',
 					esc_html__( 'Tags:', '_tw' ),
 					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -168,7 +169,7 @@ if ( ! function_exists( '_tw_entry_footer' ) ) :
 		edit_post_link(
 			sprintf(
 				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers. */
+				/* translators: %s: Name of current post. Only visible to screen readers. */
 					__( 'Edit <span class="sr-only">%s</span>', '_tw' ),
 					array(
 						'span' => array(
@@ -184,9 +185,8 @@ endif;
 
 if ( ! function_exists( '_tw_post_thumbnail' ) ) :
 	/**
-	 * Displays an optional post thumbnail.
-	 *
-	 * Wraps the post thumbnail in an anchor element on index views
+	 * Displays an optional post thumbnail, wrapping the post thumbnail in an
+	 * anchor element except when viewing a single post.
 	 */
 	function _tw_post_thumbnail() {
 		if ( ! _tw_can_show_post_thumbnail() ) {
@@ -206,7 +206,7 @@ if ( ! function_exists( '_tw_post_thumbnail' ) ) :
 
 			<figure>
 				<a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-					<?php the_post_thumbnail( 'post-thumbnail' ); ?>
+					<?php the_post_thumbnail(); ?>
 				</a>
 			</figure>
 
@@ -255,7 +255,7 @@ endif;
 
 if ( ! function_exists( '_tw_the_posts_navigation' ) ) :
 	/**
-	 * Documentation for function.
+	 * Wraps `the_posts_pagination` for use throughout the theme.
 	 */
 	function _tw_the_posts_navigation() {
 		the_posts_pagination(

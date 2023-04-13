@@ -24,7 +24,7 @@ module.exports = {
 		extend: {},
 	},
 	corePlugins: {
-		// Disable Preflight base styles in CSS targeting the editor.
+		// Disable Preflight base styles in builds targeting the editor.
 		preflight: includePreflight,
 	},
 	plugins: [

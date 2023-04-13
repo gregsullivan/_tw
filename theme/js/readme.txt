@@ -1,6 +1,7 @@
-The JavaScript code at `../../javascript/script.js` will be processed by
-esbuild, and the output file will be created in this folder as `script.min.js`
-and enqueued in `../functions.php`.
+The JavaScript code at `../../javascript/*.js` will be processed by
+esbuild, and the output file(s) will be created in this folder as `*.min.js`.
+The files `script.min.js` and `block-editor.min.js` are enqueued by default in
+`../functions.php`.
 
-DO NOT directly edit `script.min.js`, as it is ignored by git and will be
+DO NOT directly edit `*.min.js`, as these files are ignored by git and will be
 overwritten the next time esbuild runs.

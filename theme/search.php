@@ -40,7 +40,7 @@ get_header();
 
 		else :
 
-			// If no content, include the "No posts found" template.
+			// If no content is found, get the `content-none` template part.
 			get_template_part( 'template-parts/content/content', 'none' );
 
 		endif;

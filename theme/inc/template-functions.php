@@ -70,7 +70,7 @@ function _tw_get_the_archive_title() {
 add_filter( 'get_the_archive_title', '_tw_get_the_archive_title' );
 
 /**
- * Determines if post thumbnail can be displayed.
+ * Determines whether the post thumbnail can be displayed.
  */
 function _tw_can_show_post_thumbnail() {
 	return apply_filters( '_tw_can_show_post_thumbnail', ! post_password_required() && ! is_attachment() && has_post_thumbnail() );
@@ -108,8 +108,8 @@ add_filter( 'the_content_more_link', '_tw_continue_reading_link' );
 /**
  * Outputs a comment in the HTML5 format.
  *
- * This function overrides the default WordPress comment output in HTML5 format,
- * adding the required class for Tailwind Typography. Based on the
+ * This function overrides the default WordPress comment output in HTML5
+ * format, adding the required class for Tailwind Typography. Based on the
  * `html5_comment()` function from WordPress core.
  *
  * @param WP_Comment $comment Comment to display.
