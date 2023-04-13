@@ -85,8 +85,10 @@ function _tw_get_avatar_size() {
 
 /**
  * Create the continue reading link
+ *
+ * @param string $more_string The string shown within the more link.
  */
-function _tw_continue_reading_link() {
+function _tw_continue_reading_link( $more_string ) {
 
 	if ( ! is_admin() ) {
 		$continue_reading = sprintf(
@@ -95,8 +97,10 @@ function _tw_continue_reading_link() {
 			the_title( '<span class="sr-only">"', '"</span>', false )
 		);
 
-		return '<a href="' . esc_url( get_permalink() ) . '">' . $continue_reading . '</a>';
+		$more_string = '<a href="' . esc_url( get_permalink() ) . '">' . $continue_reading . '</a>';
 	}
+
+	return $more_string;
 }
 
 // Filter the excerpt more link.
