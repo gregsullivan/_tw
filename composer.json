@@ -1,11 +1,11 @@
 {
 	"require-dev": {
-		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
-		"phpcompatibility/phpcompatibility-wp": "2.1.3",
-		"sirbrillig/phpcs-changed": "^2.5.1",
-		"sirbrillig/phpcs-variable-analysis": "^2.7.0",
-		"wp-cli/i18n-command": "^2.4.1",
-		"wp-coding-standards/wpcs": "^2.1.1"
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"phpcompatibility/phpcompatibility-wp": "^2.1",
+		"sirbrillig/phpcs-changed": "^2.10",
+		"sirbrillig/phpcs-variable-analysis": "^2.11",
+		"wp-cli/i18n-command": "^2.4",
+		"wp-coding-standards/wpcs": "^2.3"
 	},
 	"scripts": {
 		"php:lint": "vendor/bin/phpcs -p -s",
