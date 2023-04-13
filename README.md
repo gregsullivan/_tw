@@ -47,12 +47,19 @@ Or [deploy with the tool of your choice](https://underscoretw.com/docs/deploymen
 * [Troubleshooting](https://underscoretw.com/docs/troubleshooting/)
  Find solutions to potential issues and answers to frequently asked questions
 
+### In Depth
+
+* [Using Tailwind Typography](https://underscoretw.com/docs/tailwind-typography/)
+ Customize front-end and back-end typographic styles
+
 ### Extras
 
 * [On Tailwind and WordPress](https://underscoretw.com/docs/wordpress-tailwind/)
  Understand how WordPress and Tailwind work together
 * [Managing Styles for Custom Blocks](https://underscoretw.com/docs/custom-blocks/)
  Learn strategies for using Tailwind in theme-specific custom blocks
+* [Setting Up Browsersync](https://underscoretw.com/docs/browsersync/)
+ Add live reloads and synchronized cross-device testing to your workflow
 
 > **Note**\
 > The default contents of `README.md` end here.
