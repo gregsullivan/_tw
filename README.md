@@ -51,6 +51,10 @@ Or [deploy with the tool of your choice](https://underscoretw.com/docs/deploymen
 
 * [Using Tailwind Typography](https://underscoretw.com/docs/tailwind-typography/)
  Customize front-end and back-end typographic styles
+* [JavaScript Bundling with esbuild](https://underscoretw.com/docs/esbuild/)
+ Install and bundle JavaScript libraries (very quickly)
+* [Linting and Code Formatting](https://underscoretw.com/docs/linting-code-formatting/)
+ Catch bugs and stop thinking about formatting
 
 ### Extras
 
@@ -195,5 +199,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## Roadmap
 
 - Record screencasts covering installation, development and deployment
-- Add WooCommerce support
 - Create a WP-CLI package
