@@ -78,12 +78,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### 2023-11-16
 #### Fixed
-- Ensure changes to `theme.json` update `tailwind.config.js` during `watch` process (#79)
-- Support Yarn (#77)
+- Ensure changes to `theme.json` update `tailwind.config.js` during `watch` process ([#79](https://github.com/gregsullivan/_tw/issues/79))
+- Support Yarn ([#77](https://github.com/gregsullivan/_tw/issues/77))
 
 ### 2023-08-15
 #### Fixed
-- Support for block editor styles in WordPress 6.3 (#60)
+- Support for block editor styles in WordPress 6.3 ([#60](https://github.com/gregsullivan/_tw/issues/60))
 
 ### [2023-04-13](https://underscoretw.com/release-notes/april-2023/)
 #### Added
