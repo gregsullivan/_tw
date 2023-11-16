@@ -173,7 +173,7 @@ add_action( 'enqueue_block_editor_assets', '_tw_enqueue_block_editor_script' );
 /**
  * Enqueue the script necessary to support Tailwind Typography in the block
  * editor, using an inline script to create a JavaScript array containing the
- * Tailwind Typography classes from _S_TYPOGRAPHY_CLASSES.
+ * Tailwind Typography classes from _TW_TYPOGRAPHY_CLASSES.
  */
 function _tw_enqueue_typography_script() {
 	if ( is_admin() ) {
