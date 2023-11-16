@@ -279,20 +279,20 @@ if ( ! function_exists( '_tw_content_class' ) ) :
 	 *
 	 * Based on WordPress core’s `body_class` and `get_body_class` functions.
 	 *
-	 * @param array $class Space-separated string or array of class names to
+	 * @param array $classes Space-separated string or array of class names to
 	 *                     add to the class list.
 	 */
-	function _tw_content_class( $class = '' ) {
-		$all_classes = array( $class, _TW_TYPOGRAPHY_CLASSES );
+	function _tw_content_class( $classes = '' ) {
+		$all_classes = array( $classes, _TW_TYPOGRAPHY_CLASSES );
 
-		foreach ( $all_classes as &$classes ) {
-			if ( ! empty( $classes ) ) {
-				if ( ! is_array( $classes ) ) {
-					$classes = preg_split( '#\s+#', $classes );
+		foreach ( $all_classes as &$class_groups ) {
+			if ( ! empty( $class_groups ) ) {
+				if ( ! is_array( $class_groups ) ) {
+					$class_groups = preg_split( '#\s+#', $class_groups );
 				}
 			} else {
 				// Ensure that we always coerce class to being an array.
-				$classes = array();
+				$class_groups = array();
 			}
 		}
 
