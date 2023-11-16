@@ -33,6 +33,7 @@
 		"dev": "npm run development",
 		"watch:tailwind:frontend": "npm run development:tailwind:frontend -- --watch",
 		"watch:tailwind:editor": "npm run development:tailwind:editor -- --watch",
+		"watch:tailwind:themejson": "chokidar \"./theme/theme.json\" -c \"nodetouch ./tailwind/tailwind.config.js\"",
 		"watch:esbuild": "npm run development:esbuild -- --watch",
 		"watch": "run-p \"watch:**\"",
 		"lint:eslint": "npx eslint theme/",

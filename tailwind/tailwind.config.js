@@ -9,7 +9,6 @@ module.exports = {
 	content: [
 		// Ensure changes to PHP files and `theme.json` trigger a rebuild.
 		'./theme/**/*.php',
-		'./theme/theme.json',
 	],
 	theme: {
 		// Extend the default Tailwind theme.
@@ -21,7 +20,7 @@ module.exports = {
 	},
 	plugins: [
 		// Extract colors and widths from `theme.json`.
-		require('@_tw/themejson')(require('../theme/theme.json')),
+		require('@_tw/themejson'),
 
 		// Add Tailwind Typography.
 		require('@tailwindcss/typography'),
