@@ -1,0 +1,17 @@
+/**
+ * Additional styles applied only to the WordPress editor
+ *
+ * It is sometimes necessary to add additional styles for the WordPress block
+ * editor, generally to improve the editor experience. For example, you may
+ * want to tweak the appearance of the title area to better match your site’s
+ * front end, or you may need to change the appearance of a block to better
+ * distinguish between its fields while editing.
+ *
+ * Those styles should be added in this file, and they will be added only to
+ * the block editor.
+ */
+
+.entry-header,
+.entry-content {
+	@apply px-8;
+}

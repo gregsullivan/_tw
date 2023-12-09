@@ -110,6 +110,7 @@ if ( ! function_exists( '_tw_setup' ) ) :
 
 		// Enqueue editor styles.
 		add_editor_style( 'style-editor.css' );
+		add_editor_style( 'style-editor-extra.css' );
 
 		// Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
