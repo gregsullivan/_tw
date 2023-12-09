@@ -4,7 +4,7 @@
 		"phpcompatibility/phpcompatibility-wp": "^2.1",
 		"sirbrillig/phpcs-changed": "^2.11",
 		"sirbrillig/phpcs-variable-analysis": "^2.11",
-		"wp-cli/i18n-command": "^2.4",
+		"wp-cli/i18n-command": "^2.5",
 		"wp-coding-standards/wpcs": "^3.0"
 	},
 	"scripts": {
