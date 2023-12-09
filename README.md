@@ -76,6 +76,20 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+### 2023-12-08
+#### Added
+- Support for block editor–only styles via `./tailwind/tailwind-editor-extra.css`
+- `@_tw/typography` to improve Tailwind Typography support in the block editor via a custom fork
+- Custom color theme and font weight overrides in `./tailwind/tailwind-typography.config.js`
+- A block style for Tailwind Typography’s `.lead` style
+
+#### Changed
+- Refactored `./javascript/tailwind-typography-classes.js`, adding new helper classes
+
+#### Removed
+- Tailwind Typography tweaks from `./tailwind/tailwind-typography.config.js`
+- `@tailwindcss/typography` (replacing it with the above-mentioned fork)
+
 ### 2023-11-16
 #### Fixed
 - Ensure changes to `theme.json` update `tailwind.config.js` during `watch` process ([#79](https://github.com/gregsullivan/_tw/issues/79))
@@ -204,8 +218,3 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### 2021-05-03
 #### Added
 - Repository made public with initial functionality
-
-## Roadmap
-
-- Record screencasts covering installation, development and deployment
-- Create a WP-CLI package
