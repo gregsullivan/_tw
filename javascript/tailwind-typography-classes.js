@@ -4,7 +4,8 @@
  * Tailwind Typography support from _tw
  *
  * The code below adds your front-end post title and Tailwind Typography
- * classes to the block editor.
+ * classes to the block editor. It also adds some helper classes so you can
+ * access the post type when modifying the block editor’s appearance.
  *
  * You should not edit this file. If you would like to use JavaScript to
  * modify the block editor, please use the `block-editor.js` file instead.
@@ -17,10 +18,35 @@
  * https://esbuild.github.io/
  */
 
+// Set our target classes and the classes we’ll add to them.
+var targetClasses = {
+	'edit-post-visual-editor__post-title-wrapper': ['entry-header'],
+	'wp-block-post-title': ['entry-title'],
+	'wp-block-post-content': ['entry-content', ...tailwindTypographyClasses],
+};
+
 wp.domReady(() => {
 	// Add the necessary Tailwind Typography classes to the block editor.
 	addTypographyClasses();
 });
+
+/**
+ * Get the class for the current post type from the `body` element. (We would
+ * use `wp.data`, but it doesn't work reliably both inside and outside of the
+ * post editor `iframe`.)
+ */
+function getCurrentPostTypeClass() {
+	let currentClass = null;
+
+	for (const classToCheck of document.body.classList) {
+		if (classToCheck.startsWith('post-type-')) {
+			currentClass = classToCheck;
+			break;
+		}
+	}
+
+	return currentClass;
+}
 
 /**
  * Because Gutenberg’s `isEditorReady` function remains unstable,
@@ -28,33 +54,36 @@ wp.domReady(() => {
  */
 function addTypographyClasses() {
 	const editorLoadedInterval = setInterval(function () {
-		// Wait until both the post title and post content blocks are present.
+		// Wait until elements with all target classes are present.
 		if (
-			document.getElementsByClassName('wp-block-post-title').length &&
-			document.getElementsByClassName('wp-block-post-content').length
+			Object.keys(targetClasses).every(
+				(className) => document.getElementsByClassName(className).length
+			)
 		) {
-			// Add the `entry-title` class to the post title block.
-			document
-				.getElementsByClassName('wp-block-post-title')[0]
-				.classList.add('entry-title');
+			if (getCurrentPostTypeClass()) {
+				// Add the post type class throughout.
+				Object.values(targetClasses).forEach((className) =>
+					className.push(getCurrentPostTypeClass())
+				);
+			}
 
-			// Add the Tailwind Typography modifiers to the post content block.
-			document
-				.getElementsByClassName('wp-block-post-content')[0]
-				.classList.add(...tailwindTypographyClasses);
+			// Add the classes before creating the mutation observer.
+			Object.entries(targetClasses).forEach(([targetClass, classes]) => {
+				document
+					.getElementsByClassName(targetClass)[0]
+					.classList.add(...classes);
+			});
 
-			// Add mutation observers to both blocks.
-			['.wp-block-post-title', '.wp-block-post-content'].forEach(
-				(className) => {
-					mutationObserver.observe(
-						document.querySelector(className),
-						{
-							attributes: true,
-							attributeFilter: ['class'],
-						}
-					);
-				}
-			);
+			// Add mutation observers to each element.
+			Object.keys(targetClasses).forEach((className) => {
+				mutationObserver.observe(
+					document.querySelector('.' + className),
+					{
+						attributes: true,
+						attributeFilter: ['class'],
+					}
+				);
+			});
 
 			// Stop the interval.
 			clearInterval(editorLoadedInterval);
@@ -77,24 +106,16 @@ const mutationObserver = new MutationObserver(function (mutations) {
 	mutations.forEach(function (mutation) {
 		const classList = mutation.target.classList;
 
-		// Check whether the mutated element is a post title or post content
-		// block.
-		if (classList.contains('wp-block-post-title')) {
-			// Check whether the `entry-title` class is present.
-			if (!classList.contains('entry-title')) {
-				// Add the `entry-title` class.
-				classList.add('entry-title');
+		Object.entries(targetClasses).forEach(([targetClass, classes]) => {
+			if (classList.contains(targetClass)) {
+				// Check whether all added classes are present.
+				if (
+					!classes.every((className) => classList.contains(className))
+				) {
+					// Add them again if they’re not.
+					classList.add(...classes);
+				}
 			}
-		} else if (classList.contains('wp-block-post-content')) {
-			// Check whether all the Tailwind Typography modifiers are present.
-			if (
-				!tailwindTypographyClasses.every((className) =>
-					classList.contains(className)
-				)
-			) {
-				// Add the Tailwind Typography modifiers.
-				classList.add(...tailwindTypographyClasses);
-			}
-		}
+		});
 	});
 });

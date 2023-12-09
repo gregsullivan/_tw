@@ -19,11 +19,11 @@ module.exports = {
 		preflight: includePreflight,
 	},
 	plugins: [
+		// Add Tailwind Typography (via _tw fork).
+		require('@_tw/typography'),
+
 		// Extract colors and widths from `theme.json`.
 		require('@_tw/themejson'),
-
-		// Add Tailwind Typography.
-		require('@tailwindcss/typography'),
 
 		// Uncomment below to add additional first-party Tailwind plugins.
 		// require('@tailwindcss/forms'),
