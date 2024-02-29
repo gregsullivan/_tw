@@ -76,7 +76,7 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-### 2022-12-22
+### 2023-12-22
 #### Changed
 - Update to Tailwind 3.4
 
