@@ -38,7 +38,7 @@
 					{
 						"config": "./tailwind/tailwind.config.js",
 						"whitelist": [
-							"(page|entry|comment)\\-([-a-z]*)",
+							"(page|entry|comment|wp-block|wp-element)\\-([-a-z]*)",
 							"vcard"
 						]
 					}
