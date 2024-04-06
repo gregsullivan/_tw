@@ -158,29 +158,10 @@ add_action( 'wp_enqueue_scripts', '_tw_scripts' );
  * Enqueue the block editor script.
  */
 function _tw_enqueue_block_editor_script() {
-	wp_enqueue_script(
-		'_tw-editor',
-		get_template_directory_uri() . '/js/block-editor.min.js',
-		array(
-			'wp-blocks',
-			'wp-edit-post',
-		),
-		_TW_VERSION,
-		true
-	);
-}
-add_action( 'enqueue_block_editor_assets', '_tw_enqueue_block_editor_script' );
-
-/**
- * Enqueue the script necessary to support Tailwind Typography in the block
- * editor, using an inline script to create a JavaScript array containing the
- * Tailwind Typography classes from _TW_TYPOGRAPHY_CLASSES.
- */
-function _tw_enqueue_typography_script() {
 	if ( is_admin() ) {
 		wp_enqueue_script(
-			'_tw-typography',
-			get_template_directory_uri() . '/js/tailwind-typography-classes.min.js',
+			'_tw-editor',
+			get_template_directory_uri() . '/js/block-editor.min.js',
 			array(
 				'wp-blocks',
 				'wp-edit-post',
@@ -188,10 +169,10 @@ function _tw_enqueue_typography_script() {
 			_TW_VERSION,
 			true
 		);
-		wp_add_inline_script( '_tw-typography', "tailwindTypographyClasses = '" . esc_attr( _TW_TYPOGRAPHY_CLASSES ) . "'.split(' ');", 'before' );
+		wp_add_inline_script( '_tw-editor', "tailwindTypographyClasses = '" . esc_attr( _TW_TYPOGRAPHY_CLASSES ) . "'.split(' ');", 'before' );
 	}
 }
-add_action( 'enqueue_block_assets', '_tw_enqueue_typography_script' );
+add_action( 'enqueue_block_assets', '_tw_enqueue_block_editor_script' );
 
 /**
  * Add the Tailwind Typography classes to TinyMCE.

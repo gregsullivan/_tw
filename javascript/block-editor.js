@@ -14,6 +14,13 @@
  * https://esbuild.github.io/
  */
 
+/**
+ * This import adds your front-end post title and Tailwind Typography classes
+ * to the block editor. It also adds some helper classes so you can access the
+ * post type when modifying the block editor’s appearance.
+ */
+import '@_tw/typography/block-editor-classes';
+
 wp.domReady(() => {
 	/**
 	 * Add support for Tailwind Typography’s `lead` class via a block style.
