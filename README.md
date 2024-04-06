@@ -76,6 +76,14 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+### 2024-04-05
+#### Changed
+- Begin importing the contents of `./javascript/tailwind-typography-classes.js` from `@_tw/typography` to `./javascript/block-editor.js`
+- Update ESLint configuration to allowlist classes beginning with `wp-block` and `wp-element` 
+
+#### Removed
+- `./javascript/tailwind-typography-classes.js`
+
 ### 2023-12-22
 #### Changed
 - Update to Tailwind 3.4
