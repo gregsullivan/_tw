@@ -279,8 +279,8 @@ if ( ! function_exists( '_tw_content_class' ) ) :
 	 *
 	 * Based on WordPress core’s `body_class` and `get_body_class` functions.
 	 *
-	 * @param array $classes Space-separated string or array of class names to
-	 *                     add to the class list.
+	 * @param string|string[] $classes Space-separated string or array of class
+	 *                                 names to add to the class list.
 	 */
 	function _tw_content_class( $classes = '' ) {
 		$all_classes = array( $classes, _TW_TYPOGRAPHY_CLASSES );
