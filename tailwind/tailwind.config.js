@@ -7,7 +7,7 @@ module.exports = {
 		require('./tailwind-typography.config.js'),
 	],
 	content: [
-		// Ensure changes to PHP files and `theme.json` trigger a rebuild.
+		// Ensure changes to PHP files trigger a rebuild.
 		'./theme/**/*.php',
 	],
 	theme: {
