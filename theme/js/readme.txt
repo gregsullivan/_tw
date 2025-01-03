@@ -1,6 +1,7 @@
 The two JavaScript files at `../../javascript` will be processed by esbuild,
 and the output files will be created in this folder with `.min.js` extensions.
-The files `script.min.js` and `block-editor.min.js` are enqueued by default in `../functions.php`.
+The files `script.min.js` and `block-editor.min.js` are enqueued by default in
+`../functions.php`.
 
 If you would like to add new files to be processed by esbuild, add them to the
 `../../javascript` folder and then add them to the `development:esbuild` key in
