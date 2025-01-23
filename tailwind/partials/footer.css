@@ -1,0 +1,21 @@
+/**
+ * Because this code is used in both `tailwind.css` and `tailwind-editor.css`,
+ * we import it from here to avoid duplication.
+ */
+
+/**
+ * Add Tailwind's component classes and any component classes registered by
+ * plugins, then add custom component classes.
+ *
+ * The `components.css` file is located in a subfolder to allow for additional
+ * components files from, e.g., vendor packages. Those files need to be
+ * manually added below.
+ */
+@import "../custom/components/components.css";
+
+/**
+ * Add Tailwind's utility classes and any utility classes registered by
+ * plugins, then add custom utility classes.
+ */
+@import "tailwindcss/utilities";
+@import "../custom/utilities.css";

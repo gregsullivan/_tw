@@ -1,0 +1,36 @@
+/**
+ * Add your design tokens as Tailwind theme variables.
+ *
+ * https://tailwindcss.com/docs/theme
+ */
+
+/**
+ * Import Tailwind’s default theme.
+ */
+@import "tailwindcss/theme";
+
+/**
+ * Your theme variables are merged with Tailwind’s defaults, either extending
+ * the default theme with new variables or overriding the values of existing
+ * variables.
+ */
+@theme {
+	/**
+	 * These theme variables use CSS variables set by WordPress using values
+	 * from your `theme.json` file.
+	 *
+	 * If you are using the classic editor, you may need to use hardcoded
+	 * color values instead of the `var()` functions below.
+	 */
+	--color-background: var(--wp--preset--color--background);
+	--color-foreground: var(--wp--preset--color--foreground);
+	--color-primary: var(--wp--preset--color--primary);
+	--color-secondary: var(--wp--preset--color--secondary);
+	--color-tertiary: var(--wp--preset--color--tertiary);
+	--container-content: var(--wp--style--global--content-size);
+	--container-wide: var(--wp--style--global--wide-size);
+
+	/**
+	 * Add your theme below:
+	 */
+}

@@ -1,37 +1,25 @@
-@import "./custom/file-header.css";
 /**
- * The line above injects the WordPress file header. It needs to be first,
- * before this comment.
+ * This file outputs to `style.css`, your main front-end style sheet.
+ *
+ * You probably won’t need to edit this file. You’re more likely to want to
+ * edit `./tailwind/tailwind-theme.css`, which contains your project’s custom
+ * design tokens, or files in the `./tailwind/custom` folder.
  */
 
 /**
- * This injects custom `@font-face` rules.
+ * Because this file shares code with `tailwind-editor.css`, we import the
+ * shared code to avoid duplication.
  */
-@import "./custom/fonts.css";
+@import "./partials/header.css";
 
 /**
- * This injects Tailwind's base styles and any base styles registered by
- * plugins, then adds custom base styles.
+ * Add Tailwind’s Preflight styles followed by your custom base styles.
  */
-@import "tailwindcss/base";
+@import "tailwindcss/preflight";
 @import "./custom/base.css";
 
 /**
- * This injects Tailwind's component classes and any component classes
- * registered by plugins, then adds custom component classes.
- *
- * The `@import-glob` line imports all CSS files from the `components`
- * directory (except for `components.css`, which is imported on the following
- * line). This is meant to simplify the process of integrating styles from
- * JavaScript components or WordPress plugins.
+ * Because this file shares code with `tailwind-editor.css`, we import the
+ * shared code to avoid duplication.
  */
-@import "tailwindcss/components";
-@import-glob "./custom/components/**/!(components).css";
-@import "./custom/components/components.css";
-
-/**
- * This injects Tailwind's utility classes and any utility classes registered
- * by plugins, then adds custom utility classes.
- */
-@import "tailwindcss/utilities";
-@import "./custom/utilities.css";
+@import "./partials/footer.css";

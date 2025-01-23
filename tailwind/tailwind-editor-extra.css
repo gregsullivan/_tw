@@ -11,6 +11,12 @@
  * the block editor.
  */
 
+/**
+ * This allows you to use classes from both the default Tailwind theme and
+ * your custom theme.
+ */
+@reference "./tailwind-theme.css";
+
 .entry-header,
 .entry-content {
 	@apply px-8;

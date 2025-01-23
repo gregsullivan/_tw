@@ -1,0 +1,26 @@
+/**
+ * This file outputs to `style-editor.css`, your main block editor style sheet.
+ *
+ * You probably won’t need to edit this file. You’re more likely to want to
+ * edit `./tailwind/tailwind-theme.css`, which contains your project’s custom
+ * design tokens, or files in the `./tailwind/custom` folder.
+ */
+
+/**
+ * Because this file shares code with `tailwind.css`, we import the shared code
+ * to avoid duplication.
+ */
+@import "./partials/header.css";
+
+/**
+ * Add your custom base styles.
+ */
+@layer base {
+	@import "./custom/base.css";
+}
+
+/**
+ * Because this file shares code with `tailwind.css`, we import the shared code
+ * to avoid duplication.
+ */
+@import "./partials/footer.css";
