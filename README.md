@@ -82,7 +82,23 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-### 2024-04-05
+### [2025-01-23](https://underscoretw.com/release-notes/january-2025/)
+#### Added
+- New `theme.json` integration using Tailwind 4’s CSS configuration
+
+#### Changed
+- Update to Tailwind 4
+- Update to ESLint 9
+
+#### Removed
+- PostCSS
+- Glob-based imports via `postcss-import-ext-glob`
+- `theme.json` parsing via `@_tw/themejson`
+- `theme.json` triggering Tailwind rebuilds via `chokidar-cli` and `touch`
+- Tailwind class name ordering in PHP files via `eslint-plugin-tailwindcss`, `@angular-eslint/template-parser` and `eslint-plugin-php-markup`
+- Tailwind first-party plugins (`@tailwindcss/aspect-ratio`, `@tailwindcss/container-queries` and `@tailwindcss/forms`)
+
+### [2024-04-05](https://underscoretw.com/release-notes/april-2024/)
 #### Changed
 - Begin importing the contents of `./javascript/tailwind-typography-classes.js` from `@_tw/typography` to `./javascript/block-editor.js`
 - Update ESLint configuration to allowlist classes beginning with `wp-block` and `wp-element` 
@@ -90,11 +106,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 #### Removed
 - `./javascript/tailwind-typography-classes.js`
 
-### 2023-12-22
+### [2023-12-22](https://underscoretw.com/release-notes/december-2023/)
 #### Changed
 - Update to Tailwind 3.4
 
-### 2023-12-08
+### [2023-12-08](https://underscoretw.com/release-notes/december-2023/)
 #### Added
 - Support for block editor–only styles via `./tailwind/tailwind-editor-extra.css`
 - `@_tw/typography` to improve Tailwind Typography support in the block editor via a custom fork
