@@ -20,7 +20,7 @@ A custom theme based on \_tw
 
 1. Move this folder to `wp-content/themes` in your local development environment
 2. Run `npm install && npm run dev` in this folder
-3. Activate this theme in WordPress
+3. Activate this theme in your local WordPress installation
 
 ### Development
 
@@ -53,13 +53,19 @@ Or [deploy with the tool of your choice](https://underscoretw.com/docs/deploymen
   Customize front-end and back-end typographic styles
 * [JavaScript Bundling with esbuild](https://underscoretw.com/docs/esbuild/)  
   Install and bundle JavaScript libraries (very quickly)
+* [Adding custom fonts](https://underscoretw.com/docs/custom-fonts/)
+  Host your fonts yourself or use a third party—and then add those fonts to your WordPress theme
 * [Linting and Code Formatting](https://underscoretw.com/docs/linting-code-formatting/)  
   Catch bugs and stop thinking about formatting
+* [Keeping your theme up-to-date](https://underscoretw.com/docs/updating/)
+  How to update (and whether or not you should)
 
 ### Extras
 
 * [On Tailwind and WordPress](https://underscoretw.com/docs/wordpress-tailwind/)  
   Understand how WordPress and Tailwind work together
+* [Styling HTML from outside the theme](https://underscoretw.com/docs/styling-html-from-outside-the-theme/)
+  Work with WordPress core, plugins and JavaScript libraries
 * [Managing Styles for Custom Blocks](https://underscoretw.com/docs/custom-blocks/)  
   Learn strategies for using Tailwind in theme-specific custom blocks
 * [Setting Up Browsersync](https://underscoretw.com/docs/browsersync/)  
