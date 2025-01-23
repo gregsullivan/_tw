@@ -1,5 +1,3 @@
-/* global wp */
-
 /**
  * Block editor modifications
  *
