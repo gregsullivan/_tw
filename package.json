@@ -16,7 +16,7 @@
 		"tailwindcss": "^4.0.12"
 	},
 	"scripts": {
-		"development:tailwind:frontend": "npx @tailwindcss/cli -i ./tailwind/tailwind.css -o ./theme/style.css",
+		"development:tailwind:frontend": "npx @tailwindcss/cli -i ./tailwind.css -o ./theme/style.css",
 		"development:tailwind:editor": "cross-env _TW_TARGET=editor npx @tailwindcss/cli -i ./tailwind/tailwind-editor.css -o ./theme/style-editor.css",
 		"development:tailwind:editor:extra": "npx @tailwindcss/cli -i tailwind/tailwind-editor-extra.css -o ./theme/style-editor-extra.css",
 		"development:esbuild": "npx esbuild ./javascript/script.js ./javascript/block-editor.js --target=esnext --bundle --outdir=./theme/js --out-extension:.js=.min.js",

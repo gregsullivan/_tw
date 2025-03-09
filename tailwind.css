@@ -10,16 +10,16 @@
  * Because this file shares code with `tailwind-editor.css`, we import the
  * shared code to avoid duplication.
  */
-@import "./partials/header.css";
+@import "./tailwind/partials/header.css";
 
 /**
  * Add Tailwind’s Preflight styles followed by your custom base styles.
  */
 @import "tailwindcss/preflight";
-@import "./custom/base.css";
+@import "./tailwind/custom/base.css";
 
 /**
  * Because this file shares code with `tailwind-editor.css`, we import the
  * shared code to avoid duplication.
  */
-@import "./partials/footer.css";
+@import "./tailwind/partials/footer.css";
