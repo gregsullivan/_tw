@@ -36,9 +36,8 @@ module.exports = {
 							 * By default, max-width is set to 65 characters.
 							 * This is a good default for readability, but
 							 * often in conflict with client-supplied designs.
-							 * A value of false removes the max-width property.
 							 */
-							maxWidth: false,
+							maxWidth: 'none',
 
 							/**
 							 * Tailwind Typography uses the font weights 400
