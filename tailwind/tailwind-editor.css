@@ -15,9 +15,7 @@
 /**
  * Add your custom base styles.
  */
-@layer base {
-	@import "./custom/base.css";
-}
+@import "./custom/base.css";
 
 /**
  * Because this file shares code with `tailwind.css`, we import the shared code
