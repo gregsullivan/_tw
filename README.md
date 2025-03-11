@@ -82,6 +82,13 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+### 2025-03-11
+#### Added
+- PostCSS, PostCSS CLI and PostCSS Nesting
+
+#### Removed
+- Tailwind CLI
+
 ### [2025-01-23](https://underscoretw.com/release-notes/january-2025/)
 #### Added
 - New `theme.json` integration using Tailwind 4’s CSS configuration
