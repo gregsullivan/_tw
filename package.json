@@ -45,6 +45,5 @@
 		"prod": "npm run production",
 		"zip": "node node_scripts/zip.js _tw",
 		"bundle": "run-s production zip"
-	},
-	"prettier": "@wordpress/prettier-config"
+	}
 }
