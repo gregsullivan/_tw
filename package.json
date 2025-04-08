@@ -2,13 +2,13 @@
 	"private": true,
 	"devDependencies": {
 		"@_tw/typography": "^0.5.17",
-		"@tailwindcss/postcss": "^4.0.14",
-		"@wordpress/prettier-config": "^4.20.0",
+		"@tailwindcss/postcss": "^4.1.3",
+		"@wordpress/prettier-config": "^4.21.0",
 		"adm-zip": "^0.5.16",
 		"archiver": "^7.0.1",
 		"cross-env": "^7.0.3",
-		"esbuild": "^0.25.1",
-		"eslint": "^9.22.0",
+		"esbuild": "^0.25.2",
+		"eslint": "^9.24.0",
 		"eslint-config-prettier": "^10.1.1",
 		"npm-run-all": "^4.1.5",
 		"postcss": "^8.5.3",
@@ -17,7 +17,7 @@
 		"postcss-url": "^10.1.3",
 		"prettier": "^3.5.3",
 		"prettier-plugin-tailwindcss": "^0.6.11",
-		"tailwindcss": "^4.0.14"
+		"tailwindcss": "^4.1.3"
 	},
 	"scripts": {
 		"development:tailwind:frontend": "npx postcss ./tailwind.css -o ./theme/style.css --verbose",
