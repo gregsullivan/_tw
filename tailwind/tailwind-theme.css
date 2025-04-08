@@ -21,7 +21,7 @@
 	 *
 	 * If you are using the classic editor, you should use hardcoded color
 	 * values instead of the `var()` functions below.
-	 */
+     */
 	--color-background: var(--wp--preset--color--background);
 	--color-foreground: var(--wp--preset--color--foreground);
 	--color-primary: var(--wp--preset--color--primary);
@@ -32,7 +32,7 @@
 
 	/**
 	 * These are the default `font-family` theme variables included with
-	 * Tailwind. You can update them below by adding custom fonts at the
+     * Tailwind. You can update them below by adding custom fonts at the
 	 * beginning of each value.
 	 *
 	 * Default theme variables can be found in their entirety at the links
@@ -41,10 +41,12 @@
 	 * https://github.com/tailwindlabs/tailwindcss/blob/main/packages/tailwindcss/theme.css
 	 * https://tailwindcss.com/docs/theme#default-theme-variable-reference
 	 */
-	--font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+	--font-sans:
+		ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
 		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	--font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-	--font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+	--font-mono:
+		ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
 		"Liberation Mono", "Courier New", monospace;
 
 	/**

@@ -1,6 +1,6 @@
-import wordpressPrettierConfig from "@wordpress/prettier-config";
+import wordpressPrettierConfig from '@wordpress/prettier-config';
 
 export default {
 	...wordpressPrettierConfig,
-	plugins: ["prettier-plugin-tailwindcss"],
+	plugins: ['prettier-plugin-tailwindcss'],
 };
