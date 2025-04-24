@@ -187,6 +187,25 @@ function _tw_tinymce_add_class( $settings ) {
 add_filter( 'tiny_mce_before_init', '_tw_tinymce_add_class' );
 
 /**
+ * Limit the block editor to heading levels supported by Tailwind Typography.
+ *
+ * @param array  $args Array of arguments for registering a block type.
+ * @param string $block_type Block type name including namespace.
+ * @return array
+ */
+function _tw_modify_heading_levels( $args, $block_type ) {
+	if ( 'core/heading' !== $block_type ) {
+		return $args;
+	}
+
+	// Remove `<h1>`, `<h5>` and `<h6>`.
+	$args['attributes']['levelOptions']['default'] = array( 2, 3, 4 );
+
+	return $args;
+}
+add_filter( 'register_block_type_args', '_tw_modify_heading_levels', 10, 2 );
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
