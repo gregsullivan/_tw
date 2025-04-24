@@ -198,7 +198,7 @@ function _tw_modify_heading_levels( $args, $block_type ) {
 		return $args;
 	}
 
-	// Remove `<h1>`, `<h5>` and `<h6>`.
+	// Remove <h1>, <h5> and <h6>.
 	$args['attributes']['levelOptions']['default'] = array( 2, 3, 4 );
 
 	return $args;
