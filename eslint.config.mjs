@@ -33,7 +33,7 @@ export default [
 		},
 	},
 	{
-		files: ['node_scripts/*.js', 'tailwind/*.js'],
+		files: ['node_scripts/*.js', 'tailwind/*.js', 'postcss.config.mjs'],
 		languageOptions: {
 			globals: {
 				...globals.node,

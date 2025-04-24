@@ -1,30 +1,36 @@
-export default {
-	plugins: {
-		'@tailwindcss/postcss': {},
-		'postcss-nesting': {},
+export default () => {
+	const shouldOptimize = process.env._TW_ENV === 'production';
 
-		/**
-		 * This is a hopefully temporary workaround to prevent `url()` values
-		 * from being rebased to the document root for bundlers by
-		 * `@tailwindcss/postcss`. See:
-		 * https://github.com/tailwindlabs/tailwindcss/pull/16965
-		 */
-		'postcss-url': {
-			url: function (asset) {
-				const prefixesToStrip = [
-					'./tailwind/custom/components/',
-					'./tailwind/custom/',
-					'./tailwind/',
-				];
+	return {
+		plugins: {
+			'@tailwindcss/postcss': {
+				optimize: shouldOptimize,
+			},
+			'postcss-nesting': {},
 
-				for (const prefix of prefixesToStrip) {
-					if (asset.url.startsWith(prefix)) {
-						return asset.url.replace(prefix, '');
+			/**
+			 * This is a hopefully temporary workaround to prevent `url()` values
+			 * from being rebased to the document root for bundlers by
+			 * `@tailwindcss/postcss`. See:
+			 * https://github.com/tailwindlabs/tailwindcss/pull/16965
+			 */
+			'postcss-url': {
+				url: function (asset) {
+					const prefixesToStrip = [
+						'./tailwind/custom/components/',
+						'./tailwind/custom/',
+						'./tailwind/',
+					];
+
+					for (const prefix of prefixesToStrip) {
+						if (asset.url.startsWith(prefix)) {
+							return asset.url.replace(prefix, '');
+						}
 					}
-				}
 
-				return asset.url;
+					return asset.url;
+				},
 			},
 		},
-	},
+	};
 };
