@@ -1,10 +1,14 @@
 export default () => {
-	const shouldOptimize = process.env._TW_ENV === 'production';
-
 	return {
 		plugins: {
+			'postcss-advanced-variables': {
+				variables: {
+					target: process.env._TW_TARGET || 'frontend',
+				},
+			},
+			'postcss-import-ext-glob': {},
 			'@tailwindcss/postcss': {
-				optimize: shouldOptimize,
+				optimize: process.env._TW_ENV === 'production',
 			},
 			'postcss-nesting': {},
 

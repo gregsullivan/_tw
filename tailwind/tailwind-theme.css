@@ -5,11 +5,6 @@
  */
 
 /**
- * Import Tailwind’s default theme.
- */
-@import "tailwindcss/theme";
-
-/**
  * Your theme variables are merged with Tailwind’s defaults, either extending
  * the default theme with new variables or overriding the values of existing
  * variables.

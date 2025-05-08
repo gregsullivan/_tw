@@ -1,25 +1,83 @@
 /**
- * This file outputs to `style.css`, your main front-end style sheet.
+ * This file outputs to `style.css`, your main front-end style sheet, and to
+ * `style-editor.css`, for the WordPress editor.
  *
  * You probably won’t need to edit this file. You’re more likely to want to
  * edit `./tailwind/tailwind-theme.css`, which contains your project’s custom
  * design tokens, or files in the `./tailwind/custom` folder.
+ *
+ * The comments in this file outline the intended usage for files in the
+ * `./tailwind/custom` folder.
  */
 
 /**
- * Because this file shares code with `tailwind-editor.css`, we import the
- * shared code to avoid duplication.
+ * Add the WordPress file header.
  */
-@import "./tailwind/partials/header.css";
+@import "./tailwind/custom/file-header.css";
 
 /**
- * Add Tailwind’s Preflight styles followed by your custom base styles.
+ * Add Tailwind’s default theme and your custom theme.
  */
-@import "tailwindcss/preflight";
+@import "tailwindcss/theme";
+@import "./tailwind/tailwind-theme.css";
+
+/**
+ * Add custom `@font-face` rules.
+ */
+@import "./tailwind/custom/fonts.css";
+
+/**
+ * Add Tailwind’s Preflight styles.
+ */
+@if $target != editor {
+	@import "tailwindcss/preflight";
+} @else  {
+	/**
+	 * In the editor, we only want to apply Preflight to descendents of an
+	 * element with the `not-prose` class.
+	 */
+	:where(.not-prose) {
+		@import "tailwindcss/preflight";
+	}
+}
+
+/**
+ * Add your custom base styles.
+ */
 @import "./tailwind/custom/base.css";
 
 /**
- * Because this file shares code with `tailwind-editor.css`, we import the
- * shared code to avoid duplication.
+ * Add your custom component styles.
+ *
+ * As used below, `@import-glob` imports all CSS files from the
+ * `./tailwind/components` directory. This makes it easier to style things like
+ * WordPress plugins or JavaScript components via separate files for each
+ * plugin or library.
+ *
+ * Please note that because these files are added alphabetically, you must
+ * ensure that CSS precedence isn’t affected by the order in which the files are
+ * included. The intended use case is for, e.g., a `woocommerce.css` file to
+ * add styles for WooCommerce using WooCommerce-specific class names, ensuring
+ * that files for other WordPress plugins or JavaScript components could be
+ * included in any order because they also use library-specific class names.
  */
-@import "./tailwind/partials/footer.css";
+@import-glob "./tailwind/custom/components/**/*.css";
+
+/**
+ * Add styles exclusively for the WordPress editor.
+ */
+@if $target == editor {
+	@import "./tailwind/tailwind-editor.css";
+}
+
+/**
+ * Add Tailwind Typography.
+ */
+@import "./tailwind/tailwind-typography.css";
+
+/**
+ * Add Tailwind’s utility classes and any utility classes registered by
+ * plugins, then add custom utility classes.
+ */
+@import "tailwindcss/utilities";
+@import "./tailwind/custom/utilities.css";

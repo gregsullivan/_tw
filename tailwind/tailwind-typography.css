@@ -1,0 +1,12 @@
+/**
+ * Add Tailwind Typography.
+ *
+ * This file is a placeholder for the CSS-first version of Tailwind Typography
+ * that will eventually supplant the plugin and configuration file included
+ * below.
+ *
+ * https://github.com/tailwindlabs/tailwindcss-typography
+ */
+
+@plugin "@_tw/typography";
+@config "./tailwind-typography.config.js";
