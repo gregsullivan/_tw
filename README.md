@@ -84,6 +84,20 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+### [2025-05-15](https://underscoretw.com/release-notes/january-2025/)
+#### Added
+- `postcss-url`, PostCSS Advanced Variables, `postcss-import-ext-glob`
+
+#### Fixed
+- Minification (following migration from `@tailwindcss/cli` to `@tailwindcss/postcss`)
+- Rewritten asset paths in CSS files
+
+#### Changed
+- Overhaul and simplify `tailwind.css`
+- Move Prettier config to `prettier.config.mjs`
+- Limit block editor heading levels to `h2`–`h4`
+- Update theme file header
+
 ### 2025-03-11
 #### Added
 - PostCSS, PostCSS CLI and PostCSS Nesting
