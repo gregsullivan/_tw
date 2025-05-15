@@ -22,6 +22,8 @@ A custom theme based on \_tw
 2. Run `npm install && npm run dev` in this folder
 3. Activate this theme in your local WordPress installation
 
+Using WordPress Multisite? Don’t forget that your theme must first be enabled via the Network Admin in order to be available for activation on a network site.
+
 ### Development
 
 4. Run `npm run watch`
