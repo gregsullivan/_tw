@@ -158,7 +158,13 @@ add_action( 'wp_enqueue_scripts', '_tw_scripts' );
  * Enqueue the block editor script.
  */
 function _tw_enqueue_block_editor_script() {
-	if ( is_admin() ) {
+	$current_screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+
+	if (
+		$current_screen &&
+		$current_screen->is_block_editor() &&
+		'widgets' !== $current_screen->id
+	) {
 		wp_enqueue_script(
 			'_tw-editor',
 			get_template_directory_uri() . '/js/block-editor.min.js',
