@@ -122,9 +122,16 @@ module.exports = {
 						'--tw-prose-quote-borders': theme('colors.primary'),
 						'--tw-prose-captions': theme('colors.foreground'),
 						'--tw-prose-kbd': theme('colors.foreground'),
-						'--tw-prose-kbd-shadows': hexToRgb(
-							theme('colors.foreground')
-						),
+
+						/**
+						 * Since the theme colors use CSS variables, you'll
+						 * need to update the hex color below and then
+						 * uncomment:
+						 */
+						// '--tw-prose-kbd-shadows': hexToRgb(
+						// 	'#123456'
+						// ),
+
 						'--tw-prose-code': theme('colors.foreground'),
 						'--tw-prose-pre-code': theme('colors.background'),
 						'--tw-prose-pre-bg': theme('colors.foreground'),
@@ -151,7 +158,16 @@ module.exports = {
 						'--tw-prose-invert-code': theme('colors.foreground'),
 						'--tw-prose-invert-pre-code':
 							theme('colors.background'),
-						'--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
+
+						/**
+						 * Since the theme colors use CSS variables, you'll
+						 * need to update the hex color below and then
+						 * uncomment:
+						 */
+						// '--tw-prose-invert-pre-bg': hexToRgb(
+						// 	'#123456'
+						// ),
+
 						'--tw-prose-invert-th-borders':
 							theme('colors.background'),
 						'--tw-prose-invert-td-borders':
