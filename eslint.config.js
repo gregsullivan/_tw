@@ -7,20 +7,13 @@ export default [
 		ignores: ['**/*.min.js', '**/vendor/'],
 	},
 	{
-		files: ['**/*.{js,mjs}'],
+		files: ['**/*.js'],
 		languageOptions: {
 			ecmaVersion: 'latest',
-			sourceType: 'script',
 		},
 		rules: {
 			...js.configs.recommended.rules,
 			...prettier.rules,
-		},
-	},
-	{
-		files: ['javascript/**/*.js', '**/*.mjs'],
-		languageOptions: {
-			sourceType: 'module',
 		},
 	},
 	{
@@ -33,7 +26,7 @@ export default [
 		},
 	},
 	{
-		files: ['node_scripts/*.js', 'tailwind/*.js', 'postcss.config.mjs'],
+		files: ['node_scripts/*.js', 'tailwind/*.js', 'postcss.config.js'],
 		languageOptions: {
 			globals: {
 				...globals.node,

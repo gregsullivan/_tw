@@ -5,17 +5,22 @@
  * @see: https://www.archiverjs.com/docs/quickstart
  */
 
-// Require modules.
-const AdmZip = require('adm-zip');
-const archiver = require('archiver');
-const fs = require('fs');
+// Import modules.
+import AdmZip from 'adm-zip';
+import archiver from 'archiver';
+import fs from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 
 const args = process.argv.slice(2);
 const slug = args[0];
 
 if (slug) {
+	// Get `__dirname` equivalent from `fileURLToPath` value.
+	const __dirname = dirname(fileURLToPath(import.meta.url));
+
 	// Set the path for the ZIP file.
-	const zipFilePath = __dirname + '/../' + slug + '.zip';
+	const zipFilePath = join(__dirname, '..', `${slug}.zip`);
 
 	// Create a file to stream archive data to.
 	const output = fs.createWriteStream(zipFilePath);
@@ -30,7 +35,7 @@ if (slug) {
 		const zip = new AdmZip(zipFilePath);
 
 		// Load `./functions.php` from the zip file.
-		const entry = zip.getEntry(slug + '/functions.php');
+		const entry = zip.getEntry(`${slug}/functions.php`);
 
 		if (entry) {
 			// Get the contents of `./functions.php`.
@@ -83,7 +88,7 @@ if (slug) {
 
 	// Append the entire contents of the theme directory to a directory with
 	// the theme slug.
-	archive.directory(__dirname + '/../theme/', slug);
+	archive.directory(join(__dirname, '..', 'theme/'), slug);
 
 	// Finalize the archive.
 	archive.finalize();
