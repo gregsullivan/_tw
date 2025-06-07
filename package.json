@@ -27,7 +27,7 @@
 		"bundle": "run-s production zip"
 	},
 	"devDependencies": {
-		"@_tw/typography": "^0.5.18",
+		"@_tw/typography": "^0.5.19",
 		"@tailwindcss/postcss": "^4.1.8",
 		"@wordpress/prettier-config": "^4.25.0",
 		"adm-zip": "^0.5.16",
