@@ -1,11 +1,11 @@
 {
 	"require-dev": {
-		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.1",
 		"phpcompatibility/phpcompatibility-wp": "^2.1",
 		"sirbrillig/phpcs-changed": "^2.11",
-		"sirbrillig/phpcs-variable-analysis": "^2.11",
+		"sirbrillig/phpcs-variable-analysis": "^2.12",
 		"wp-cli/i18n-command": "^2.6",
-		"wp-coding-standards/wpcs": "^3.1"
+		"wp-coding-standards/wpcs": "^3.2"
 	},
 	"scripts": {
 		"php:lint": "vendor/bin/phpcs -p -s",

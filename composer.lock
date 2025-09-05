@@ -4,33 +4,33 @@
 		"Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
 		"This file is @generated automatically"
 	],
-	"content-hash": "9b00f3c8bae3fe8260fb9fa0180f856b",
+	"content-hash": "c98a517a683927a2951c048698635d91",
 	"packages": [],
 	"packages-dev": [
 		{
 			"name": "dealerdirect/phpcodesniffer-composer-installer",
-			"version": "v1.0.0",
+			"version": "v1.1.2",
 			"source": {
 				"type": "git",
 				"url": "https://github.com/PHPCSStandards/composer-installer.git",
-				"reference": "4be43904336affa5c2f70744a348312336afd0da"
+				"reference": "e9cf5e4bbf7eeaf9ef5db34938942602838fc2b1"
 			},
 			"dist": {
 				"type": "zip",
-				"url": "https://api.github.com/repos/PHPCSStandards/composer-installer/zipball/4be43904336affa5c2f70744a348312336afd0da",
-				"reference": "4be43904336affa5c2f70744a348312336afd0da",
+				"url": "https://api.github.com/repos/PHPCSStandards/composer-installer/zipball/e9cf5e4bbf7eeaf9ef5db34938942602838fc2b1",
+				"reference": "e9cf5e4bbf7eeaf9ef5db34938942602838fc2b1",
 				"shasum": ""
 			},
 			"require": {
-				"composer-plugin-api": "^1.0 || ^2.0",
+				"composer-plugin-api": "^2.2",
 				"php": ">=5.4",
 				"squizlabs/php_codesniffer": "^2.0 || ^3.1.0 || ^4.0"
 			},
 			"require-dev": {
-				"composer/composer": "*",
+				"composer/composer": "^2.2",
 				"ext-json": "*",
 				"ext-zip": "*",
-				"php-parallel-lint/php-parallel-lint": "^1.3.1",
+				"php-parallel-lint/php-parallel-lint": "^1.4.0",
 				"phpcompatibility/php-compatibility": "^9.0",
 				"yoast/phpunit-polyfills": "^1.0"
 			},
@@ -50,9 +50,9 @@
 			"authors": [
 				{
 					"name": "Franck Nijhof",
-					"email": "franck.nijhof@dealerdirect.com",
-					"homepage": "http://www.frenck.nl",
-					"role": "Developer / IT Manager"
+					"email": "opensource@frenck.dev",
+					"homepage": "https://frenck.dev",
+					"role": "Open source developer"
 				},
 				{
 					"name": "Contributors",
@@ -60,7 +60,6 @@
 				}
 			],
 			"description": "PHP_CodeSniffer Standards Composer Installer Plugin",
-			"homepage": "http://www.dealerdirect.com",
 			"keywords": [
 				"PHPCodeSniffer",
 				"PHP_CodeSniffer",
@@ -81,9 +80,28 @@
 			],
 			"support": {
 				"issues": "https://github.com/PHPCSStandards/composer-installer/issues",
+				"security": "https://github.com/PHPCSStandards/composer-installer/security/policy",
 				"source": "https://github.com/PHPCSStandards/composer-installer"
 			},
-			"time": "2023-01-05T11:28:13+00:00"
+			"funding": [
+				{
+					"url": "https://github.com/PHPCSStandards",
+					"type": "github"
+				},
+				{
+					"url": "https://github.com/jrfnl",
+					"type": "github"
+				},
+				{
+					"url": "https://opencollective.com/php_codesniffer",
+					"type": "open_collective"
+				},
+				{
+					"url": "https://thanks.dev/u/gh/phpcsstandards",
+					"type": "thanks_dev"
+				}
+			],
+			"time": "2025-07-17T20:45:56+00:00"
 		},
 		{
 			"name": "eftec/bladeone",
@@ -226,16 +244,16 @@
 		},
 		{
 			"name": "gettext/languages",
-			"version": "2.10.0",
+			"version": "2.12.1",
 			"source": {
 				"type": "git",
 				"url": "https://github.com/php-gettext/Languages.git",
-				"reference": "4d61d67fe83a2ad85959fe6133d6d9ba7dddd1ab"
+				"reference": "0b0b0851c55168e1dfb14305735c64019732b5f1"
 			},
 			"dist": {
 				"type": "zip",
-				"url": "https://api.github.com/repos/php-gettext/Languages/zipball/4d61d67fe83a2ad85959fe6133d6d9ba7dddd1ab",
-				"reference": "4d61d67fe83a2ad85959fe6133d6d9ba7dddd1ab",
+				"url": "https://api.github.com/repos/php-gettext/Languages/zipball/0b0b0851c55168e1dfb14305735c64019732b5f1",
+				"reference": "0b0b0851c55168e1dfb14305735c64019732b5f1",
 				"shasum": ""
 			},
 			"require": {
@@ -245,7 +263,8 @@
 				"phpunit/phpunit": "^4.8 || ^5.7 || ^6.5 || ^7.5 || ^8.4"
 			},
 			"bin": [
-				"bin/export-plural-rules"
+				"bin/export-plural-rules",
+				"bin/import-cldr-data"
 			],
 			"type": "library",
 			"autoload": {
@@ -284,7 +303,7 @@
 			],
 			"support": {
 				"issues": "https://github.com/php-gettext/Languages/issues",
-				"source": "https://github.com/php-gettext/Languages/tree/2.10.0"
+				"source": "https://github.com/php-gettext/Languages/tree/2.12.1"
 			},
 			"funding": [
 				{
@@ -296,20 +315,20 @@
 					"type": "github"
 				}
 			],
-			"time": "2022-10-18T15:00:10+00:00"
+			"time": "2025-03-19T11:14:02+00:00"
 		},
 		{
 			"name": "mck89/peast",
-			"version": "v1.16.3",
+			"version": "v1.17.2",
 			"source": {
 				"type": "git",
 				"url": "https://github.com/mck89/peast.git",
-				"reference": "645ec21b650bc2aced18285c85f220d22afc1430"
+				"reference": "465810689c477fbba17f4f949b75e4d0bdab13ea"
 			},
 			"dist": {
 				"type": "zip",
-				"url": "https://api.github.com/repos/mck89/peast/zipball/645ec21b650bc2aced18285c85f220d22afc1430",
-				"reference": "645ec21b650bc2aced18285c85f220d22afc1430",
+				"url": "https://api.github.com/repos/mck89/peast/zipball/465810689c477fbba17f4f949b75e4d0bdab13ea",
+				"reference": "465810689c477fbba17f4f949b75e4d0bdab13ea",
 				"shasum": ""
 			},
 			"require": {
@@ -322,7 +341,7 @@
 			"type": "library",
 			"extra": {
 				"branch-alias": {
-					"dev-master": "1.16.3-dev"
+					"dev-master": "1.17.2-dev"
 				}
 			},
 			"autoload": {
@@ -343,59 +362,9 @@
 			"description": "Peast is PHP library that generates AST for JavaScript code",
 			"support": {
 				"issues": "https://github.com/mck89/peast/issues",
-				"source": "https://github.com/mck89/peast/tree/v1.16.3"
+				"source": "https://github.com/mck89/peast/tree/v1.17.2"
 			},
-			"time": "2024-07-23T14:00:32+00:00"
-		},
-		{
-			"name": "mustache/mustache",
-			"version": "v2.14.2",
-			"source": {
-				"type": "git",
-				"url": "https://github.com/bobthecow/mustache.php.git",
-				"reference": "e62b7c3849d22ec55f3ec425507bf7968193a6cb"
-			},
-			"dist": {
-				"type": "zip",
-				"url": "https://api.github.com/repos/bobthecow/mustache.php/zipball/e62b7c3849d22ec55f3ec425507bf7968193a6cb",
-				"reference": "e62b7c3849d22ec55f3ec425507bf7968193a6cb",
-				"shasum": ""
-			},
-			"require": {
-				"php": ">=5.2.4"
-			},
-			"require-dev": {
-				"friendsofphp/php-cs-fixer": "~1.11",
-				"phpunit/phpunit": "~3.7|~4.0|~5.0"
-			},
-			"type": "library",
-			"autoload": {
-				"psr-0": {
-					"Mustache": "src/"
-				}
-			},
-			"notification-url": "https://packagist.org/downloads/",
-			"license": [
-				"MIT"
-			],
-			"authors": [
-				{
-					"name": "Justin Hileman",
-					"email": "justin@justinhileman.info",
-					"homepage": "http://justinhileman.com"
-				}
-			],
-			"description": "A Mustache implementation in PHP.",
-			"homepage": "https://github.com/bobthecow/mustache.php",
-			"keywords": [
-				"mustache",
-				"templating"
-			],
-			"support": {
-				"issues": "https://github.com/bobthecow/mustache.php/issues",
-				"source": "https://github.com/bobthecow/mustache.php/tree/v2.14.2"
-			},
-			"time": "2022-08-23T13:07:01+00:00"
+			"time": "2025-07-01T09:30:45+00:00"
 		},
 		{
 			"name": "phpcompatibility/php-compatibility",
@@ -533,21 +502,22 @@
 		},
 		{
 			"name": "phpcompatibility/phpcompatibility-wp",
-			"version": "2.1.6",
+			"version": "2.1.7",
 			"source": {
 				"type": "git",
 				"url": "https://github.com/PHPCompatibility/PHPCompatibilityWP.git",
-				"reference": "80ccb1a7640995edf1b87a4409fa584cd5869469"
+				"reference": "5bfbbfbabb3df2b9a83e601de9153e4a7111962c"
 			},
 			"dist": {
 				"type": "zip",
-				"url": "https://api.github.com/repos/PHPCompatibility/PHPCompatibilityWP/zipball/80ccb1a7640995edf1b87a4409fa584cd5869469",
-				"reference": "80ccb1a7640995edf1b87a4409fa584cd5869469",
+				"url": "https://api.github.com/repos/PHPCompatibility/PHPCompatibilityWP/zipball/5bfbbfbabb3df2b9a83e601de9153e4a7111962c",
+				"reference": "5bfbbfbabb3df2b9a83e601de9153e4a7111962c",
 				"shasum": ""
 			},
 			"require": {
 				"phpcompatibility/php-compatibility": "^9.0",
-				"phpcompatibility/phpcompatibility-paragonie": "^1.0"
+				"phpcompatibility/phpcompatibility-paragonie": "^1.0",
+				"squizlabs/php_codesniffer": "^3.3"
 			},
 			"require-dev": {
 				"dealerdirect/phpcodesniffer-composer-installer": "^1.0"
@@ -597,35 +567,39 @@
 				{
 					"url": "https://opencollective.com/php_codesniffer",
 					"type": "open_collective"
+				},
+				{
+					"url": "https://thanks.dev/u/gh/phpcompatibility",
+					"type": "thanks_dev"
 				}
 			],
-			"time": "2025-01-16T22:34:19+00:00"
+			"time": "2025-05-12T16:38:37+00:00"
 		},
 		{
 			"name": "phpcsstandards/phpcsextra",
-			"version": "1.2.1",
+			"version": "1.4.1",
 			"source": {
 				"type": "git",
 				"url": "https://github.com/PHPCSStandards/PHPCSExtra.git",
-				"reference": "11d387c6642b6e4acaf0bd9bf5203b8cca1ec489"
+				"reference": "882b8c947ada27eb002870fe77fee9ce0a454cdb"
 			},
 			"dist": {
 				"type": "zip",
-				"url": "https://api.github.com/repos/PHPCSStandards/PHPCSExtra/zipball/11d387c6642b6e4acaf0bd9bf5203b8cca1ec489",
-				"reference": "11d387c6642b6e4acaf0bd9bf5203b8cca1ec489",
+				"url": "https://api.github.com/repos/PHPCSStandards/PHPCSExtra/zipball/882b8c947ada27eb002870fe77fee9ce0a454cdb",
+				"reference": "882b8c947ada27eb002870fe77fee9ce0a454cdb",
 				"shasum": ""
 			},
 			"require": {
 				"php": ">=5.4",
-				"phpcsstandards/phpcsutils": "^1.0.9",
-				"squizlabs/php_codesniffer": "^3.8.0"
+				"phpcsstandards/phpcsutils": "^1.1.2",
+				"squizlabs/php_codesniffer": "^3.13.4 || ^4.0"
 			},
 			"require-dev": {
 				"php-parallel-lint/php-console-highlighter": "^1.0",
-				"php-parallel-lint/php-parallel-lint": "^1.3.2",
+				"php-parallel-lint/php-parallel-lint": "^1.4.0",
 				"phpcsstandards/phpcsdevcs": "^1.1.6",
 				"phpcsstandards/phpcsdevtools": "^1.2.1",
-				"phpunit/phpunit": "^4.5 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || ^9.0"
+				"phpunit/phpunit": "^4.5 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || ^9.3.4"
 			},
 			"type": "phpcodesniffer-standard",
 			"extra": {
@@ -675,35 +649,39 @@
 				{
 					"url": "https://opencollective.com/php_codesniffer",
 					"type": "open_collective"
+				},
+				{
+					"url": "https://thanks.dev/u/gh/phpcsstandards",
+					"type": "thanks_dev"
 				}
 			],
-			"time": "2023-12-08T16:49:07+00:00"
+			"time": "2025-09-05T06:54:52+00:00"
 		},
 		{
 			"name": "phpcsstandards/phpcsutils",
-			"version": "1.0.12",
+			"version": "1.1.2",
 			"source": {
 				"type": "git",
 				"url": "https://github.com/PHPCSStandards/PHPCSUtils.git",
-				"reference": "87b233b00daf83fb70f40c9a28692be017ea7c6c"
+				"reference": "b22b59e3d9ec8fe4953e42c7d59117c6eae70eae"
 			},
 			"dist": {
 				"type": "zip",
-				"url": "https://api.github.com/repos/PHPCSStandards/PHPCSUtils/zipball/87b233b00daf83fb70f40c9a28692be017ea7c6c",
-				"reference": "87b233b00daf83fb70f40c9a28692be017ea7c6c",
+				"url": "https://api.github.com/repos/PHPCSStandards/PHPCSUtils/zipball/b22b59e3d9ec8fe4953e42c7d59117c6eae70eae",
+				"reference": "b22b59e3d9ec8fe4953e42c7d59117c6eae70eae",
 				"shasum": ""
 			},
 			"require": {
 				"dealerdirect/phpcodesniffer-composer-installer": "^0.4.1 || ^0.5 || ^0.6.2 || ^0.7 || ^1.0",
 				"php": ">=5.4",
-				"squizlabs/php_codesniffer": "^3.10.0 || 4.0.x-dev@dev"
+				"squizlabs/php_codesniffer": "^3.13.3 || ^4.0"
 			},
 			"require-dev": {
 				"ext-filter": "*",
 				"php-parallel-lint/php-console-highlighter": "^1.0",
-				"php-parallel-lint/php-parallel-lint": "^1.3.2",
+				"php-parallel-lint/php-parallel-lint": "^1.4.0",
 				"phpcsstandards/phpcsdevcs": "^1.1.6",
-				"yoast/phpunit-polyfills": "^1.1.0 || ^2.0.0"
+				"yoast/phpunit-polyfills": "^1.1.0 || ^2.0.0 || ^3.0.0"
 			},
 			"type": "phpcodesniffer-standard",
 			"extra": {
@@ -740,6 +718,7 @@
 				"phpcodesniffer-standard",
 				"phpcs",
 				"phpcs3",
+				"phpcs4",
 				"standards",
 				"static analysis",
 				"tokens",
@@ -763,22 +742,26 @@
 				{
 					"url": "https://opencollective.com/php_codesniffer",
 					"type": "open_collective"
+				},
+				{
+					"url": "https://thanks.dev/u/gh/phpcsstandards",
+					"type": "thanks_dev"
 				}
 			],
-			"time": "2024-05-20T13:34:27+00:00"
+			"time": "2025-09-05T00:00:03+00:00"
 		},
 		{
 			"name": "sirbrillig/phpcs-changed",
-			"version": "v2.11.7",
+			"version": "v2.11.8",
 			"source": {
 				"type": "git",
 				"url": "https://github.com/sirbrillig/phpcs-changed.git",
-				"reference": "71ac60966beb5969f346f4a5defeb2ba025c712e"
+				"reference": "1c6deb684d648b4d75c577bead4c6d43dc46e4ab"
 			},
 			"dist": {
 				"type": "zip",
-				"url": "https://api.github.com/repos/sirbrillig/phpcs-changed/zipball/71ac60966beb5969f346f4a5defeb2ba025c712e",
-				"reference": "71ac60966beb5969f346f4a5defeb2ba025c712e",
+				"url": "https://api.github.com/repos/sirbrillig/phpcs-changed/zipball/1c6deb684d648b4d75c577bead4c6d43dc46e4ab",
+				"reference": "1c6deb684d648b4d75c577bead4c6d43dc46e4ab",
 				"shasum": ""
 			},
 			"require": {
@@ -817,22 +800,22 @@
 			"description": "Run phpcs on files, but only report warnings/errors from lines which were changed.",
 			"support": {
 				"issues": "https://github.com/sirbrillig/phpcs-changed/issues",
-				"source": "https://github.com/sirbrillig/phpcs-changed/tree/v2.11.7"
+				"source": "https://github.com/sirbrillig/phpcs-changed/tree/v2.11.8"
 			},
-			"time": "2025-01-14T18:34:53+00:00"
+			"time": "2025-03-11T15:23:48+00:00"
 		},
 		{
 			"name": "sirbrillig/phpcs-variable-analysis",
-			"version": "v2.11.22",
+			"version": "v2.12.0",
 			"source": {
 				"type": "git",
 				"url": "https://github.com/sirbrillig/phpcs-variable-analysis.git",
-				"reference": "ffb6f16c6033ec61ed84446b479a31d6529f0eb7"
+				"reference": "4debf5383d9ade705e0a25121f16c3fecaf433a7"
 			},
 			"dist": {
 				"type": "zip",
-				"url": "https://api.github.com/repos/sirbrillig/phpcs-variable-analysis/zipball/ffb6f16c6033ec61ed84446b479a31d6529f0eb7",
-				"reference": "ffb6f16c6033ec61ed84446b479a31d6529f0eb7",
+				"url": "https://api.github.com/repos/sirbrillig/phpcs-variable-analysis/zipball/4debf5383d9ade705e0a25121f16c3fecaf433a7",
+				"reference": "4debf5383d9ade705e0a25121f16c3fecaf433a7",
 				"shasum": ""
 			},
 			"require": {
@@ -876,20 +859,20 @@
 				"source": "https://github.com/sirbrillig/phpcs-variable-analysis",
 				"wiki": "https://github.com/sirbrillig/phpcs-variable-analysis/wiki"
 			},
-			"time": "2025-01-06T17:54:24+00:00"
+			"time": "2025-03-17T16:17:38+00:00"
 		},
 		{
 			"name": "squizlabs/php_codesniffer",
-			"version": "3.11.2",
+			"version": "3.13.4",
 			"source": {
 				"type": "git",
 				"url": "https://github.com/PHPCSStandards/PHP_CodeSniffer.git",
-				"reference": "1368f4a58c3c52114b86b1abe8f4098869cb0079"
+				"reference": "ad545ea9c1b7d270ce0fc9cbfb884161cd706119"
 			},
 			"dist": {
 				"type": "zip",
-				"url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/1368f4a58c3c52114b86b1abe8f4098869cb0079",
-				"reference": "1368f4a58c3c52114b86b1abe8f4098869cb0079",
+				"url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/ad545ea9c1b7d270ce0fc9cbfb884161cd706119",
+				"reference": "ad545ea9c1b7d270ce0fc9cbfb884161cd706119",
 				"shasum": ""
 			},
 			"require": {
@@ -954,22 +937,26 @@
 				{
 					"url": "https://opencollective.com/php_codesniffer",
 					"type": "open_collective"
+				},
+				{
+					"url": "https://thanks.dev/u/gh/phpcsstandards",
+					"type": "thanks_dev"
 				}
 			],
-			"time": "2024-12-11T16:04:26+00:00"
+			"time": "2025-09-05T05:47:09+00:00"
 		},
 		{
 			"name": "symfony/finder",
-			"version": "v7.2.2",
+			"version": "v7.3.2",
 			"source": {
 				"type": "git",
 				"url": "https://github.com/symfony/finder.git",
-				"reference": "87a71856f2f56e4100373e92529eed3171695cfb"
+				"reference": "2a6614966ba1074fa93dae0bc804227422df4dfe"
 			},
 			"dist": {
 				"type": "zip",
-				"url": "https://api.github.com/repos/symfony/finder/zipball/87a71856f2f56e4100373e92529eed3171695cfb",
-				"reference": "87a71856f2f56e4100373e92529eed3171695cfb",
+				"url": "https://api.github.com/repos/symfony/finder/zipball/2a6614966ba1074fa93dae0bc804227422df4dfe",
+				"reference": "2a6614966ba1074fa93dae0bc804227422df4dfe",
 				"shasum": ""
 			},
 			"require": {
@@ -1004,7 +991,7 @@
 			"description": "Finds files and directories via an intuitive fluent interface",
 			"homepage": "https://symfony.com",
 			"support": {
-				"source": "https://github.com/symfony/finder/tree/v7.2.2"
+				"source": "https://github.com/symfony/finder/tree/v7.3.2"
 			},
 			"funding": [
 				{
@@ -1016,35 +1003,39 @@
 					"type": "github"
 				},
 				{
+					"url": "https://github.com/nicolas-grekas",
+					"type": "github"
+				},
+				{
 					"url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
 					"type": "tidelift"
 				}
 			],
-			"time": "2024-12-30T19:00:17+00:00"
+			"time": "2025-07-15T13:41:35+00:00"
 		},
 		{
 			"name": "wp-cli/i18n-command",
-			"version": "v2.6.3",
+			"version": "v2.6.5",
 			"source": {
 				"type": "git",
 				"url": "https://github.com/wp-cli/i18n-command.git",
-				"reference": "065bb3758fcbff922f1b7a01ab702aab0da79803"
+				"reference": "5e73d417398993625331a9f69f6c2ef60f234070"
 			},
 			"dist": {
 				"type": "zip",
-				"url": "https://api.github.com/repos/wp-cli/i18n-command/zipball/065bb3758fcbff922f1b7a01ab702aab0da79803",
-				"reference": "065bb3758fcbff922f1b7a01ab702aab0da79803",
+				"url": "https://api.github.com/repos/wp-cli/i18n-command/zipball/5e73d417398993625331a9f69f6c2ef60f234070",
+				"reference": "5e73d417398993625331a9f69f6c2ef60f234070",
 				"shasum": ""
 			},
 			"require": {
 				"eftec/bladeone": "3.52",
 				"gettext/gettext": "^4.8",
 				"mck89/peast": "^1.13.11",
-				"wp-cli/wp-cli": "^2.5"
+				"wp-cli/wp-cli": "^2.12"
 			},
 			"require-dev": {
 				"wp-cli/scaffold-command": "^1.2 || ^2",
-				"wp-cli/wp-cli-tests": "^4"
+				"wp-cli/wp-cli-tests": "^4.3.9"
 			},
 			"suggest": {
 				"ext-json": "Used for reading and generating JSON translation files",
@@ -1087,9 +1078,61 @@
 			"homepage": "https://github.com/wp-cli/i18n-command",
 			"support": {
 				"issues": "https://github.com/wp-cli/i18n-command/issues",
-				"source": "https://github.com/wp-cli/i18n-command/tree/v2.6.3"
+				"source": "https://github.com/wp-cli/i18n-command/tree/v2.6.5"
 			},
-			"time": "2024-10-01T11:16:25+00:00"
+			"time": "2025-04-25T21:49:29+00:00"
+		},
+		{
+			"name": "wp-cli/mustache",
+			"version": "v2.14.99",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/wp-cli/mustache.php.git",
+				"reference": "ca23b97ac35fbe01c160549eb634396183d04a59"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/wp-cli/mustache.php/zipball/ca23b97ac35fbe01c160549eb634396183d04a59",
+				"reference": "ca23b97ac35fbe01c160549eb634396183d04a59",
+				"shasum": ""
+			},
+			"require": {
+				"php": ">=5.6"
+			},
+			"replace": {
+				"mustache/mustache": "^2.14.2"
+			},
+			"require-dev": {
+				"friendsofphp/php-cs-fixer": "~2.19.3",
+				"yoast/phpunit-polyfills": "^2.0"
+			},
+			"type": "library",
+			"autoload": {
+				"psr-0": {
+					"Mustache": "src/"
+				}
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"MIT"
+			],
+			"authors": [
+				{
+					"name": "Justin Hileman",
+					"email": "justin@justinhileman.info",
+					"homepage": "http://justinhileman.com"
+				}
+			],
+			"description": "A Mustache implementation in PHP.",
+			"homepage": "https://github.com/bobthecow/mustache.php",
+			"keywords": [
+				"mustache",
+				"templating"
+			],
+			"support": {
+				"source": "https://github.com/wp-cli/mustache.php/tree/v2.14.99"
+			},
+			"time": "2025-05-06T16:15:37+00:00"
 		},
 		{
 			"name": "wp-cli/mustangostang-spyc",
@@ -1144,20 +1187,20 @@
 		},
 		{
 			"name": "wp-cli/php-cli-tools",
-			"version": "v0.11.22",
+			"version": "v0.12.5",
 			"source": {
 				"type": "git",
 				"url": "https://github.com/wp-cli/php-cli-tools.git",
-				"reference": "a6bb94664ca36d0962f9c2ff25591c315a550c51"
+				"reference": "34b83b4f700df8a4ec3fd17bf7e7e7d8ca5f28da"
 			},
 			"dist": {
 				"type": "zip",
-				"url": "https://api.github.com/repos/wp-cli/php-cli-tools/zipball/a6bb94664ca36d0962f9c2ff25591c315a550c51",
-				"reference": "a6bb94664ca36d0962f9c2ff25591c315a550c51",
+				"url": "https://api.github.com/repos/wp-cli/php-cli-tools/zipball/34b83b4f700df8a4ec3fd17bf7e7e7d8ca5f28da",
+				"reference": "34b83b4f700df8a4ec3fd17bf7e7e7d8ca5f28da",
 				"shasum": ""
 			},
 			"require": {
-				"php": ">= 5.3.0"
+				"php": ">= 5.6.0"
 			},
 			"require-dev": {
 				"roave/security-advisories": "dev-latest",
@@ -1201,39 +1244,38 @@
 			],
 			"support": {
 				"issues": "https://github.com/wp-cli/php-cli-tools/issues",
-				"source": "https://github.com/wp-cli/php-cli-tools/tree/v0.11.22"
+				"source": "https://github.com/wp-cli/php-cli-tools/tree/v0.12.5"
 			},
-			"time": "2023-12-03T19:25:05+00:00"
+			"time": "2025-03-26T16:13:46+00:00"
 		},
 		{
 			"name": "wp-cli/wp-cli",
-			"version": "v2.11.0",
+			"version": "v2.12.0",
 			"source": {
 				"type": "git",
 				"url": "https://github.com/wp-cli/wp-cli.git",
-				"reference": "53f0df112901fcf95099d0f501912a209429b6a9"
+				"reference": "03d30d4138d12b4bffd8b507b82e56e129e0523f"
 			},
 			"dist": {
 				"type": "zip",
-				"url": "https://api.github.com/repos/wp-cli/wp-cli/zipball/53f0df112901fcf95099d0f501912a209429b6a9",
-				"reference": "53f0df112901fcf95099d0f501912a209429b6a9",
+				"url": "https://api.github.com/repos/wp-cli/wp-cli/zipball/03d30d4138d12b4bffd8b507b82e56e129e0523f",
+				"reference": "03d30d4138d12b4bffd8b507b82e56e129e0523f",
 				"shasum": ""
 			},
 			"require": {
 				"ext-curl": "*",
-				"mustache/mustache": "^2.14.1",
 				"php": "^5.6 || ^7.0 || ^8.0",
 				"symfony/finder": ">2.7",
+				"wp-cli/mustache": "^2.14.99",
 				"wp-cli/mustangostang-spyc": "^0.6.3",
-				"wp-cli/php-cli-tools": "~0.11.2"
+				"wp-cli/php-cli-tools": "~0.12.4"
 			},
 			"require-dev": {
-				"roave/security-advisories": "dev-latest",
 				"wp-cli/db-command": "^1.3 || ^2",
 				"wp-cli/entity-command": "^1.2 || ^2",
 				"wp-cli/extension-command": "^1.1 || ^2",
 				"wp-cli/package-command": "^1 || ^2",
-				"wp-cli/wp-cli-tests": "^4.0.1"
+				"wp-cli/wp-cli-tests": "^4.3.10"
 			},
 			"suggest": {
 				"ext-readline": "Include for a better --prompt implementation",
@@ -1246,7 +1288,7 @@
 			"type": "library",
 			"extra": {
 				"branch-alias": {
-					"dev-main": "2.11.x-dev"
+					"dev-main": "2.12.x-dev"
 				}
 			},
 			"autoload": {
@@ -1273,20 +1315,20 @@
 				"issues": "https://github.com/wp-cli/wp-cli/issues",
 				"source": "https://github.com/wp-cli/wp-cli"
 			},
-			"time": "2024-08-08T03:04:55+00:00"
+			"time": "2025-05-07T01:16:12+00:00"
 		},
 		{
 			"name": "wp-coding-standards/wpcs",
-			"version": "3.1.0",
+			"version": "3.2.0",
 			"source": {
 				"type": "git",
 				"url": "https://github.com/WordPress/WordPress-Coding-Standards.git",
-				"reference": "9333efcbff231f10dfd9c56bb7b65818b4733ca7"
+				"reference": "d2421de7cec3274ae622c22c744de9a62c7925af"
 			},
 			"dist": {
 				"type": "zip",
-				"url": "https://api.github.com/repos/WordPress/WordPress-Coding-Standards/zipball/9333efcbff231f10dfd9c56bb7b65818b4733ca7",
-				"reference": "9333efcbff231f10dfd9c56bb7b65818b4733ca7",
+				"url": "https://api.github.com/repos/WordPress/WordPress-Coding-Standards/zipball/d2421de7cec3274ae622c22c744de9a62c7925af",
+				"reference": "d2421de7cec3274ae622c22c744de9a62c7925af",
 				"shasum": ""
 			},
 			"require": {
@@ -1295,13 +1337,13 @@
 				"ext-tokenizer": "*",
 				"ext-xmlreader": "*",
 				"php": ">=5.4",
-				"phpcsstandards/phpcsextra": "^1.2.1",
-				"phpcsstandards/phpcsutils": "^1.0.10",
-				"squizlabs/php_codesniffer": "^3.9.0"
+				"phpcsstandards/phpcsextra": "^1.4.0",
+				"phpcsstandards/phpcsutils": "^1.1.0",
+				"squizlabs/php_codesniffer": "^3.13.0"
 			},
 			"require-dev": {
 				"php-parallel-lint/php-console-highlighter": "^1.0.0",
-				"php-parallel-lint/php-parallel-lint": "^1.3.2",
+				"php-parallel-lint/php-parallel-lint": "^1.4.0",
 				"phpcompatibility/php-compatibility": "^9.0",
 				"phpcsstandards/phpcsdevtools": "^1.2.0",
 				"phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || ^9.0"
@@ -1339,7 +1381,7 @@
 					"type": "custom"
 				}
 			],
-			"time": "2024-03-25T16:39:00+00:00"
+			"time": "2025-07-24T20:08:31+00:00"
 		}
 	],
 	"aliases": [],
