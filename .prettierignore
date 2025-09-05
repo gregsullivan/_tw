@@ -6,7 +6,6 @@
 !tailwind.css
 !tailwind/**/*.css
 !*.js
-!*.mjs
 
 # Ignore minified JavaScript:
 *.min.js
