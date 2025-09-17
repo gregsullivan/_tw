@@ -84,6 +84,22 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+### 2025-09-17
+#### Added
+- `postcss-header`, to support the build process for `tailwind-intellisense.css`, which improves Tailwind CSS language server support
+
+#### Removed
+- `postcss-url`, now that the `transformAssetUrls` option has landed in `@tailwindcss/postcss`
+
+### 2025-06-06
+#### Added
+- `.npmrc` file to force the installation of `devDependencies`
+- `cssnano`
+
+#### Changed
+- `type` is now set to `module` in `package.json`
+- All `.mjs` files renamed to `.js`
+
 ### [2025-05-15](https://underscoretw.com/release-notes/may-2025/)
 #### Added
 - `postcss-url`, PostCSS Advanced Variables, `postcss-import-ext-glob`
