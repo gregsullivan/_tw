@@ -9,6 +9,7 @@
 style.css
 style-editor.css
 style-editor-extra.css
+tailwind-intellisense.css
 
 # Ignore the generated zip file:
 _tw.zip
