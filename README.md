@@ -84,6 +84,10 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+### 2025-10-15
+#### Added
+- CSS-only Tailwind Typography
+
 ### 2025-09-17
 #### Added
 - `postcss-header`, to support the build process for `tailwind-intellisense.css`, which improves Tailwind CSS language server support
