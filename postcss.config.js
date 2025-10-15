@@ -8,6 +8,10 @@ export default () => {
 		'postcss-advanced-variables': {
 			variables: {
 				target: process.env._TW_TARGET || 'frontend',
+				'where-not':
+					'editor' === process.env._TW_TARGET
+						? "[class~='not-prose'], [class~='not-prose'] *, [class~='acf-block-body']:not([class~='acf-block-preview']) *"
+						: "[class~='not-prose'], [class~='not-prose'] *",
 			},
 		},
 		'postcss-nesting': {},

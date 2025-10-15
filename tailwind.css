@@ -64,13 +64,6 @@
 @import-glob "./tailwind/custom/components/**/*.css";
 
 /**
- * Add styles exclusively for the WordPress editor.
- */
-@if $target == editor {
-	@import "./tailwind/tailwind-editor.css";
-}
-
-/**
  * Add Tailwind Typography.
  */
 @import "./tailwind/tailwind-typography.css";
@@ -81,3 +74,10 @@
  */
 @import "tailwindcss/utilities";
 @import "./tailwind/custom/utilities.css";
+
+/**
+ * Add styles exclusively for the WordPress editor.
+ */
+@if $target == editor {
+	@import "./tailwind/tailwind-editor.css";
+}

@@ -1,12 +1,71 @@
 /**
  * Add Tailwind Typography.
  *
- * This file is a placeholder for the CSS-first version of Tailwind Typography
- * that will eventually supplant the plugin and configuration file included
- * below.
- *
  * https://github.com/tailwindlabs/tailwindcss-typography
  */
 
-@plugin "@_tw/typography";
-@config "./tailwind-typography.config.js";
+/**
+ * Import Tailwind Typography fork.
+ */
+@import "@_tw/typography";
+
+/**
+ * Tailwind Typography uses the font weights 400 through 900. If you’re not
+ * using a variable font, you may need to limit the number of supported
+ * weights. Below are all of the default weights, ready to be overridden. for
+ * example, if you wanted to use only the weights 400 and 700, you might change
+ * `-medium` to `400`, and `-semibold`, `-extrabold` and `-black` to `700`.
+ */
+@theme {
+	--tw-prose-font-normal: 400;
+	--tw-prose-font-medium: 500;
+	--tw-prose-font-semibold: 600;
+	--tw-prose-font-bold: 700;
+	--tw-prose-font-extrabold: 800;
+	--tw-prose-font-black: 900;
+}
+
+/**
+ * By default, _tw uses Tailwind Typography's Neutral gray scale. If you are
+ * adapting an existing design and you need to set specific colors throughout,
+ * you can do so here. In your `./theme/functions.php file, you will need to
+ * replace `-neutral` with `-_tw`.
+ */
+@utility prose-_tw {
+	--tw-prose-body: --theme(--color-foreground, initial);
+	--tw-prose-headings: --theme(--color-foreground, initial);
+	--tw-prose-lead: --theme(--color-foreground, initial);
+	--tw-prose-links: --theme(--color-primary, initial);
+	--tw-prose-bold: --theme(--color-foreground, initial);
+	--tw-prose-counters: --theme(--color-foreground, initial);
+	--tw-prose-bullets: --theme(--color-foreground, initial);
+	--tw-prose-hr: --theme(--color-foreground, initial);
+	--tw-prose-quotes: --theme(--color-foreground, initial);
+	--tw-prose-quote-borders: --theme(--color-primary, initial);
+	--tw-prose-captions: --theme(--color-foreground, initial);
+	--tw-prose-kbd: --theme(--color-foreground, initial);
+	--tw-prose-kbd-shadows: --theme(--color-foreground, initial);
+	--tw-prose-code: --theme(--color-foreground, initial);
+	--tw-prose-pre-code: --theme(--color-background, initial);
+	--tw-prose-pre-bg: --theme(--color-foreground, initial);
+	--tw-prose-th-borders: --theme(--color-foreground, initial);
+	--tw-prose-td-borders: --theme(--color-foreground, initial);
+	--tw-prose-invert-body: --theme(--color-background, initial);
+	--tw-prose-invert-headings: --theme(--color-background, initial);
+	--tw-prose-invert-lead: --theme(--color-background, initial);
+	--tw-prose-invert-links: --theme(--color-primary, initial);
+	--tw-prose-invert-bold: --theme(--color-background, initial);
+	--tw-prose-invert-counters: --theme(--color-background, initial);
+	--tw-prose-invert-bullets: --theme(--color-background, initial);
+	--tw-prose-invert-hr: --theme(--color-background, initial);
+	--tw-prose-invert-quotes: --theme(--color-background, initial);
+	--tw-prose-invert-quote-borders: --theme(--color-primary, initial);
+	--tw-prose-invert-captions: --theme(--color-background, initial);
+	--tw-prose-invert-kbd: --theme(--color-background, initial);
+	--tw-prose-invert-kbd-shadows: --theme(--color-background, initial);
+	--tw-prose-invert-code: --theme(--color-background, initial);
+	--tw-prose-invert-pre-code: --theme(--color-foreground, initial);
+	--tw-prose-invert-pre-bg: --theme(--color-background, initial);
+	--tw-prose-invert-th-borders: --theme(--color-background, initial);
+	--tw-prose-invert-td-borders: --theme(--color-background, initial);
+}
