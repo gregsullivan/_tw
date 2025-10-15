@@ -1,11 +1,11 @@
 /**
  * Custom styles to immediately follow Tailwind’s `components` layer
  *
- * “Add more opinionated, complex classes like buttons, form controls, alerts,
- * etc; the sort of pre-built components you often see in other frameworks that
- * you might need to override with utility classes.”
+ * “Use the `components` layer for any more complicated classes you want to add
+ *  to your project that you'd still like to be able to override with utility
+ *  classes.”
  *
- * — from https://tailwindcss.com/docs/plugins#adding-components
+ *  — from https://tailwindcss.com/docs/adding-custom-styles#adding-component-classes
  */
 
 /**
@@ -20,6 +20,19 @@
 .page-title,
 .entry-title {
 	@apply max-w-content mx-auto mb-6 text-3xl font-extrabold text-neutral-900;
+}
+
+/**
+ * Post meta and footer styles
+ *
+ * These will be applied to the post-specific elements to keep the post itself
+ * at content width pending custom styling.
+ */
+.entry-meta,
+.entry-footer,
+.post-navigation,
+#comments {
+	@apply max-w-content mx-auto mb-6;
 }
 
 /**
