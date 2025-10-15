@@ -29,15 +29,15 @@
 		"bundle": "run-s production zip"
 	},
 	"devDependencies": {
-		"@_tw/typography": "^0.5.19",
-		"@tailwindcss/postcss": "^4.1.13",
-		"@wordpress/prettier-config": "^4.31.0",
+		"@_tw/typography": "^0.5.20",
+		"@tailwindcss/postcss": "^4.1.14",
+		"@wordpress/prettier-config": "^4.32.0",
 		"adm-zip": "^0.5.16",
 		"archiver": "^7.0.1",
-		"cross-env": "^10.0.0",
+		"cross-env": "^10.1.0",
 		"cssnano": "^7.1.1",
-		"esbuild": "^0.25.10",
-		"eslint": "^9.35.0",
+		"esbuild": "^0.25.11",
+		"eslint": "^9.37.0",
 		"eslint-config-prettier": "^10.1.8",
 		"npm-run-all": "^4.1.5",
 		"postcss": "^8.5.6",
@@ -47,7 +47,7 @@
 		"postcss-import-ext-glob": "^2.1.1",
 		"postcss-nesting": "^13.0.2",
 		"prettier": "^3.6.2",
-		"prettier-plugin-tailwindcss": "^0.6.14",
-		"tailwindcss": "^4.1.13"
+		"prettier-plugin-tailwindcss": "^0.7.0",
+		"tailwindcss": "^4.1.14"
 	}
 }
