@@ -81,7 +81,7 @@ if ( ! function_exists( '_tw_entry_meta' ) ) :
 			if ( $categories_list ) {
 				printf(
 				/* translators: 1: posted in label, only visible to screen readers. 2: list of categories. */
-					'<span class="sr-only">%1$s</span>%2$s',
+					'<span><span class="sr-only">%1$s</span>%2$s</span>',
 					esc_html__( 'Posted in', '_tw' ),
 					$categories_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				);
@@ -92,7 +92,7 @@ if ( ! function_exists( '_tw_entry_meta' ) ) :
 			if ( $tags_list ) {
 				printf(
 				/* translators: 1: tags label, only visible to screen readers. 2: list of tags. */
-					'<span class="sr-only">%1$s</span>%2$s',
+					'<span><span class="sr-only">%1$s</span>%2$s</span>',
 					esc_html__( 'Tags:', '_tw' ),
 					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				);
@@ -142,7 +142,7 @@ if ( ! function_exists( '_tw_entry_footer' ) ) :
 			if ( $categories_list ) {
 				printf(
 				/* translators: 1: posted in label, only visible to screen readers. 2: list of categories. */
-					'<span class="sr-only">%1$s</span>%2$s',
+					'<span><span class="sr-only">%1$s</span>%2$s</span>',
 					esc_html__( 'Posted in', '_tw' ),
 					$categories_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				);
@@ -153,7 +153,7 @@ if ( ! function_exists( '_tw_entry_footer' ) ) :
 			if ( $tags_list ) {
 				printf(
 				/* translators: 1: tags label, only visible to screen readers. 2: list of tags. */
-					'<span class="sr-only">%1$s</span>%2$s',
+					'<span><span class="sr-only">%1$s</span>%2$s</span>',
 					esc_html__( 'Tags:', '_tw' ),
 					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				);
