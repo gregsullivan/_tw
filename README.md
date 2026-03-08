@@ -84,6 +84,13 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+### 2026-03-09
+#### Added
+- Tailwind class ordering in PHP templates via ESLint
+
+#### Removed
+- `archiver`
+
 ### 2025-10-15
 #### Added
 - CSS-only Tailwind Typography
