@@ -5,11 +5,6 @@
  */
 
 /**
- * Import Tailwind Typography fork.
- */
-@import "@_tw/typography";
-
-/**
  * Tailwind Typography uses the font weights 400 through 900. If you’re not
  * using a variable font, you may need to limit the number of supported
  * weights. Below are all of the default weights, ready to be overridden. for
@@ -69,3 +64,12 @@
 	--tw-prose-invert-th-borders: --theme(--color-background, initial);
 	--tw-prose-invert-td-borders: --theme(--color-background, initial);
 }
+
+/**
+ * Import Tailwind Typography fork. If you want to make extensive changes to
+ * Tailwind Typography, you may want to replace the import below with the
+ * contents of this file and then edit it directly:
+ *
+ * https://github.com/gregsullivan/_tw-typography/blob/master/index.css
+ */
+@import "@_tw/typography";
