@@ -29,24 +29,27 @@
 		"bundle": "run-s production zip"
 	},
 	"devDependencies": {
-		"@_tw/typography": "^0.5.20",
-		"@tailwindcss/postcss": "^4.1.14",
-		"@wordpress/prettier-config": "^4.32.0",
+		"@_tw/typography": "^0.5.21",
+		"@angular-eslint/template-parser": "^21.2.0",
+		"@tailwindcss/postcss": "^4.2.1",
+		"@wordpress/prettier-config": "^4.40.0",
 		"adm-zip": "^0.5.16",
 		"cross-env": "^10.1.0",
-		"cssnano": "^7.1.1",
-		"esbuild": "^0.25.11",
-		"eslint": "^9.37.0",
+		"cssnano": "^7.1.2",
+		"esbuild": "^0.27.3",
+		"eslint": "^9.39.3",
 		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-php-templates": "^1.0.0-beta.0",
+		"eslint-plugin-tailwindcss": "^4.0.0-beta.0",
 		"npm-run-all": "^4.1.5",
 		"postcss": "^8.5.6",
 		"postcss-advanced-variables": "^5.0.0",
 		"postcss-cli": "^11.0.1",
 		"postcss-header": "^3.0.3",
 		"postcss-import-ext-glob": "^2.1.1",
-		"postcss-nesting": "^13.0.2",
-		"prettier": "^3.6.2",
-		"prettier-plugin-tailwindcss": "^0.7.0",
-		"tailwindcss": "^4.1.14"
+		"postcss-nesting": "^14.0.0",
+		"prettier": "^3.8.1",
+		"prettier-plugin-tailwindcss": "^0.7.2",
+		"tailwindcss": "^4.2.1"
 	}
 }
