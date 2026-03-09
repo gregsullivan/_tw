@@ -39,7 +39,7 @@
 		"esbuild": "^0.27.3",
 		"eslint": "^9.39.4",
 		"eslint-config-prettier": "^10.1.8",
-		"eslint-plugin-php-templates": "^1.0.0-beta.0",
+		"eslint-plugin-php-templates": "^1.0.0-beta.2",
 		"eslint-plugin-tailwindcss": "^4.0.0-beta.0",
 		"npm-run-all": "^4.1.5",
 		"postcss": "^8.5.8",
