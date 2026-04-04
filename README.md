@@ -3,9 +3,7 @@
 
 This repository tracks the output of the [_tw WordPress starter theme generator](https://underscoretw.com/) with all options left blank.
 
-Right now there isn't a public repository for the generator itself. Please post issues regarding the generator to this repository.
-
-If you're starting a new project, [the generator](https://underscoretw.com/) is the best way to do that. You can also read [the documentation](https://underscoretw.com/docs/) for more details.
+If you're starting a new project, [the web-based generator](https://underscoretw.com/) or [WP-CLI package](https://underscoretw.com/docs/wp-cli/) are the best ways to do that. You can also read [the documentation](https://underscoretw.com/docs/) for more details.
 
 ---
 
@@ -55,18 +53,20 @@ Or [deploy with the tool of your choice](https://underscoretw.com/docs/deploymen
   Customize front-end and back-end typographic styles
 * [JavaScript Bundling with esbuild](https://underscoretw.com/docs/esbuild/)  
   Install and bundle JavaScript libraries (very quickly)
-* [Adding custom fonts](https://underscoretw.com/docs/custom-fonts/)
+* [Adding custom fonts](https://underscoretw.com/docs/custom-fonts/)  
   Host your fonts yourself or use a third party—and then add those fonts to your WordPress theme
 * [Linting and Code Formatting](https://underscoretw.com/docs/linting-code-formatting/)  
   Catch bugs and stop thinking about formatting
-* [Keeping your theme up-to-date](https://underscoretw.com/docs/updating/)
+* [Generating your theme with WP-CLI](https://underscoretw.com/docs/wp-cli/)  
+  For humans who prefer the command line, and for LLMs that prefer the command line even more
+* [Keeping your theme up-to-date](https://underscoretw.com/docs/updating/)  
   How to update (and whether or not you should)
 
 ### Extras
 
 * [On Tailwind and WordPress](https://underscoretw.com/docs/wordpress-tailwind/)  
   Understand how WordPress and Tailwind work together
-* [Styling HTML from outside the theme](https://underscoretw.com/docs/styling-html-from-outside-the-theme/)
+* [Styling HTML from outside the theme](https://underscoretw.com/docs/styling-html-from-outside-the-theme/)  
   Work with WordPress core, plugins and JavaScript libraries
 * [Managing Styles for Custom Blocks](https://underscoretw.com/docs/custom-blocks/)  
   Learn strategies for using Tailwind in theme-specific custom blocks
@@ -83,6 +83,10 @@ Or [deploy with the tool of your choice](https://underscoretw.com/docs/deploymen
 All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
+
+### 2026-04-04
+#### Added
+- [Theme generation via WP-CLI](https://underscoretw.com/docs/wp-cli/)
 
 ### [2026-03-09](https://underscoretw.com/release-notes/march-2026/)
 #### Added
